@@ -1,0 +1,5 @@
+- [] disable win key.
+- [] disalbe F1 and win+f1.
+- [] disable Ctrl+Alt+down
+- [] disable Ctrl+Alt+up
+- [] make notepad++ as default editor

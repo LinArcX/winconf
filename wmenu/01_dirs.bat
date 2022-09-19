@@ -1,6 +1,6 @@
 @echo off
 
-set dirs=C:\;Home;.ssh;LocalAppData;.emacs.d;nvim;lf;mpv;Clavier.ini;Downloads;winconf;wmenu;vivre;languages;ConnectToPhone(Ftp)
+set dirs=C:\;Home;.ssh;LocalAppData;.emacs.d;nvim;lf;mpv;Clavier.ini;Downloads;D:\;winconf;wmenu;vivre;languages;video(D:\);proramming(books);E:\;video(E:\);ConnectToPhone(Ftp)
 start /B wmenu.exe --elements "%dirs%" | more > %temp%/dirs.txt
 
 for /f "tokens=*" %%s in (%temp%\dirs.txt) do (
@@ -24,6 +24,8 @@ for /f "tokens=*" %%s in (%temp%\dirs.txt) do (
 	start nvim %LOCALAPPDATA%\Clavier+\Clavier.ini
   ) ELSE IF "%%s"=="Downloads" (
 	start %userprofile%\Downloads
+  ) ELSE IF "%%s"=="D:\" (
+	start D:\
   ) ELSE IF "%%s"=="winconf" (
 	start D:\workspace\other\winconf
   ) ELSE IF "%%s"=="wmenu" (
@@ -32,32 +34,18 @@ for /f "tokens=*" %%s in (%temp%\dirs.txt) do (
 	start D:\workspace\other\vivre
   ) ELSE IF "%%s"=="languages" (
 	start D:\books\02_languages
+  ) ELSE IF "%%s"=="video(D:\)" (
+	start D:\video
+  ) ELSE IF "%%s"=="proramming(books)" (
+	start D:\books\01_computer\programming
+  ) ELSE IF "%%s"=="E:\" (
+	start E:\
+  ) ELSE IF "%%s"=="video(E:\)" (
+	start E:\video
   ) ELSE IF "%%s"=="ConnectToPhone(Ftp)" (
 	start explorer ftp://saeed@192.168.1.38:2121/
-  )  ELSE IF "%%s"=="Uget(Download Manager)" (
-	"C:\ProgramData\chocolatey\bin\uget.exe"
-  ) ELSE IF "%%s"=="AnyDesk(remote desktop)" (
-	"C:\Program Files (x86)\AnyDesk\AnyDesk.exe"
-  ) ELSE IF "%%s"=="ChocoCleaner" (
-	pwsh -c  gsudo choco-cleaner.bat 
-  ) ELSE IF "%%s"=="CmakeGui" (
-	"C:\Program Files\CMake\bin\cmake-gui.exe"
-  ) ELSE IF "%%s"=="DependencyWalker" (
-	"C:\ProgramData\chocolatey\lib\dependencywalker\content\depends.exe"
-  ) ELSE IF "%%s"=="ProcessExplorer" (
-	"C:\ProgramData\chocolatey\lib\procexp\tools\procexp64.exe"
-  ) ELSE IF "%%s"=="WindowDetective" (
-	"C:\Program Files (x86)\Window Detective\Window Detective.exe"
-  ) ELSE IF "%%s"=="Notepad" (
-	start %%s
-  ) ELSE IF "%%s"=="Paint" (
-	start mspaint
-  ) ELSE IF "%%s"=="Cmd" (
-	start %%s
-  ) ELSE IF "%%s"=="Clavier+" (
-	start C:\Users\saeed\AppData\Local\Clavier+\Clavier.exe
-  ) ELSE IF "%%s"=="RecycleBin" (
-	start shell:RecycleBinFolder
+  ) ELSE IF "%%s"=="E:\" (
+	start E:\
   ) ELSE (
 	REM default case...
   )

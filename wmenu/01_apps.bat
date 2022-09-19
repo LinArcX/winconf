@@ -1,6 +1,6 @@
 @echo off
 
-set apps=Brave(browser);Powershell(shell);File Manager(gui);Visual Studio 2019;Emacs(runemacs);Notepad++;Anki;Calculator(speedcrunch);QBitTorrent;Uget(Download Manager);AnyDesk(remote desktop);ChocoCleaner;CmakeGui;DependencyWalker;ProcessExplorer;WindowDetective;Notepad;Paint;Cmd;Clavier+;RecycleBin;
+set apps=Brave(browser);Powershell(shell);File Manager(gui);Visual Studio 2019;Emacs(runemacs);Notepad++;Anki;Calculator(speedcrunch);QBitTorrent;Uget(Download Manager);AnyDesk(remote desktop);ChocoCleaner;CmakeGui;DependencyWalker;ProcessExplorer;WindowDetective;RegEdit;LocalGroupPolicyEditor(gpedit.msc);Notepad;Paint;Cmd;Clavier+;RecycleBin;
 start /B wmenu.exe --elements "%apps%" | more > %temp%/apps.txt
 
 for /f "tokens=*" %%s in (%temp%\apps.txt) do (
@@ -36,6 +36,10 @@ for /f "tokens=*" %%s in (%temp%\apps.txt) do (
 	"C:\ProgramData\chocolatey\lib\procexp\tools\procexp64.exe"
   ) ELSE IF "%%s"=="WindowDetective" (
 	"C:\Program Files (x86)\Window Detective\Window Detective.exe"
+  ) ELSE IF "%%s"=="RegEdit" (
+	regedit
+  ) ELSE IF "%%s"=="LocalGroupPolicyEditor(gpedit.msc)" (
+	gpedit.msc
   ) ELSE IF "%%s"=="Notepad" (
 	start %%s
   ) ELSE IF "%%s"=="Paint" (

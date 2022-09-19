@@ -320,6 +320,35 @@ Import:
 
 `C:\> for /F %A in (allvariables.txt) do SET %A`
 
+# Other tips
+Q: How disable win key?
+A: run gpedit.msc and go to: UserConfiguration > Administrative Templates > Windows Components > File Explorer
+And "Enable" this item: "Turn off windows Key hotkeys"
+
+Q: How disalbe F1?
+A: Copy this into a file and run it as administrator:
+```
+@echo off
+
+REM Run this file as Administrator
+
+taskkill /f /im HelpPane.exe
+takeown /f c:\windows\HelpPane.exe
+icacls c:\windows\HelpPane.exe /deny Everyone:(X)
+```
+
+Q: How disable Ctrl+Alt+down and Ctrl+Alt+up?
+A: Right click on "Intel Hd Graphics" in system tray. Graphic opitons > HotKeys > Disable.
+
+Q: How make notepad++ as default editor?
+A: 
+
+Q: How remove pinned items from QuickAccess?
+A: Just click on QuickAcces button in file explorer to open it. And then right click on every item that you want to unpin.
+
+Q: Some pinned items like network locations won't delete from QuickAccess. How remove theme?
+A: Just put another quickaccess link in QuickAcces folder. Select both of them and unpin them.
+
 # References
 - https://www.thetopsites.net/article/54098567.shtml
 - https://miloserdov.org/?p=1839

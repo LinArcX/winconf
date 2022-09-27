@@ -1,8 +1,3 @@
-#TOD
-[] compile dmenu with cygwin.
-[] compile lf with cygwin.
-[] compile nvim with cygwin.
-
 # Windows Basics
 - Default user directory: `C:\Users\<user-name>`
 - Switch to it: `cd ~` or `cd`
@@ -36,12 +31,18 @@
 
 Tip: To manage your dot-files, always use __SymbolicLink_.
 
-## Services
+# Services
 Search for a service:
 `Get-Service  | grep Event`
 
 Start Service:
 `Start-Service EventLog`
+
+## Delete a service
+```
+gsudo sc stop tor
+gsudo sc delete tor
+```
 
 # Configuring Special Software
 ## Chocolatey

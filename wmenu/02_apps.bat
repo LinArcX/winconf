@@ -1,14 +1,14 @@
 @echo off
 
-set apps=Brave(browser);Powershell(shell);File Manager(gui);Visual Studio 2019;Emacs(runemacs);Notepad++;Anki;Calculator(speedcrunch);QBitTorrent;Uget(Download Manager);AnyDesk(remote desktop);ChocoCleaner;CmakeGui;DependencyWalker;ProcessExplorer;WindowDetective;RegEdit;LocalGroupPolicyEditor(gpedit.msc);Notepad;Paint;Cmd;Clavier+;RecycleBin;
-start /B wmenu.exe --elements "%apps%" | more > %temp%/apps.txt
+set apps=Brave(browser);Powershell(pwsh, shell);File Manager(gui, explorer);Visual Studio 2019;Emacs(runemacs);Notepad++;Anki;TorBrowser;Zeal;Calculator(speedcrunch);QBitTorrent;Uget(Download Manager);AnyDesk(remote desktop);ChocoCleaner;CmakeGui;DependencyWalker;ProcessExplorer;WindowDetective;RegEdit;LocalGroupPolicyEditor(gpedit.msc);Notepad;Paint;Cmd;Clavier+;RecycleBin;ProgramsAndFeatures;DateTime;ComputerManagment;
+start /B wmenu.exe -elements "%apps%" -prompt "Apps: " -fontName "Cascadia Code" -fontSize 8 -caseInsensitive -lineNumber 8 | more > %temp%/apps.txt
 
 for /f "tokens=*" %%s in (%temp%\apps.txt) do (
   IF "%%s"=="Brave(browser)" (
 	"C:\Users\saeed\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe"
-  ) ELSE IF "%%s"=="Powershell(shell)" (
+  ) ELSE IF "%%s"=="Powershell(pwsh, shell)" (
 	start pwsh
-  ) ELSE IF "%%s"=="File Manager(gui)" (
+  ) ELSE IF "%%s"=="File Manager(gui, explorer)" (
 	start explorer
   ) ELSE IF "%%s"=="Visual Studio 2019" (
 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe"
@@ -18,6 +18,10 @@ for /f "tokens=*" %%s in (%temp%\apps.txt) do (
 	start %%s
   ) ELSE IF "%%s"=="Anki" (
 	"C:\Program Files\Anki\anki.exe"
+  ) ELSE IF "%%s"=="TorBrowser" (
+	"D:\software\02_windows\Tor Browser\Browser\firefox.exe"
+  ) ELSE IF "%%s"=="Zeal" (
+	"C:\Program Files\Zeal\zeal.exe"
   ) ELSE IF "%%s"=="Calculator(speedcrunch)" (
 	"C:\Program Files (x86)\SpeedCrunch\speedcrunch.exe"
   ) ELSE IF "%%s"=="QBitTorrent" (
@@ -50,9 +54,19 @@ for /f "tokens=*" %%s in (%temp%\apps.txt) do (
 	start C:\Users\saeed\AppData\Local\Clavier+\Clavier.exe
   ) ELSE IF "%%s"=="RecycleBin" (
 	start shell:RecycleBinFolder
+  ) ELSE IF "%%s"=="ProgramsAndFeatures" (
+	start appwiz.cpl
+  ) ELSE IF "%%s"=="DateTime" (
+	start timedate.cpl
+  ) ELSE IF "%%s"=="ComputerManagment" (
+	start compmgmt.msc
+  ) ELSE IF "%%s"=="ProgramsAndFeatures" (
+	start appwiz.cpl
   ) ELSE (
 	REM default case...
   )
 )
+
+
 
 del "%temp%\apps.txt"

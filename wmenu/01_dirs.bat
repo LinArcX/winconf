@@ -1,7 +1,7 @@
 @echo off
 
 set dirs=C:\;Home;.ssh;LocalAppData;.emacs.d;nvim;lf;mpv;Clavier.ini;Downloads;D:\;winconf;wmenu;vivre;languages;video(D:\);proramming(books);E:\;video(E:\);ConnectToPhone(Ftp)
-start /B wmenu.exe --elements "%dirs%" | more > %temp%/dirs.txt
+start /B wmenu.exe -elements "%dirs%" -prompt "Directories: " -fontName "Cascadia Code" -fontSize 8 -caseInsensitive -lineNumber 8 | more > %temp%/dirs.txt
 
 for /f "tokens=*" %%s in (%temp%\dirs.txt) do (
   IF "%%s"=="C:\" (

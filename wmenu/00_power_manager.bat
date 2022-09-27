@@ -1,16 +1,17 @@
 @echo off
 
-set items=Zzz(lock);LogOut;Restart;PowerOff;
-start /B wmenu.exe --elements "%items%" | more > %temp%/items.txt
+set items=Zzz(lock);Logout;Restart;Shutdown;
+
+start /B wmenu.exe -elements "%items%" -prompt "PowerManager: " -caseInsensitive -fontName "Cascadia Code" -fontSize 8 | more > %temp%/items.txt
 
 for /f "tokens=*" %%s in (%temp%\items.txt) do (
   IF "%%s"=="Zzz(lock)" (
 	Rundll32.exe user32.dll,LockWorkStation
-  ) ELSE IF "%%s"=="LogOut" (
+  ) ELSE IF "%%s"=="Logout" (
 	shutdown /l
   ) ELSE IF "%%s"=="Restart" (
-	shutdown /r /f
-  ) ELSE IF "%%s"=="PowerOff" (
+	shutdown -r -t 0
+  ) ELSE IF "%%s"=="Shutdown" (
 	shutdown /p /f
   ) ELSE (
 	REM default case...

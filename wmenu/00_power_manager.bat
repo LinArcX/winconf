@@ -1,6 +1,6 @@
 @echo off
 
-set items=Zzz(lock);Logout;Restart;Shutdown;
+set items=Zzz(lock),Logout,Restart,Shutdown
 
 start /B wmenu.exe -elements "%items%" -prompt "PowerManager: " -caseInsensitive -fontName "Cascadia Code" -fontSize 8 | more > %temp%/items.txt
 

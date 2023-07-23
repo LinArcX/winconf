@@ -1,3 +1,83 @@
+# Prerequisites
+- Clavier+
+- Clink
+- Git
+- 7Zip
+- Nomacs
+- Flameshot
+- Okular
+- Notepad++
+- Brave
+- OBS Studio
+- QBitTorrent
+- anki
+- wmenu [https://github.com/LinArcX/wmenu]
+- lf [https://github.com/gokcehan/lf/releases]
+- ripgrep [https://github.com/BurntSushi/ripgrep/releases]
+- Cygwin
+	- arc
+	- ascii
+	- atool
+	- bash
+	- bc
+	- bvi
+	- bzip3
+	- cgdb
+	- cloc
+	- colordiff
+	- colorgcc
+	- cppcheck
+	- coreutils
+	- cpuid
+	- cscope
+	- ctags
+	- ctris
+	- curl
+	- diffstat
+	- diffutils
+	- dog
+	- dos2unix
+	- doxygen
+	- duff
+	- enca
+	- gdb
+	- gcc-core
+	- gcc-g++
+	- xxd
+	- tar
+	- p7zip 
+	- zip 
+	- unzip
+	- xz
+	- zstd
+	- mediainfo
+	- rsync
+	- fzf
+	- fzf-bash
+	- fzf-bash-completion
+	- jq
+	
+# packages not available
+- tmux? (i should create a native win32)
+- eva? (i should create a native win32 and replace it with bc from cygwin)
+- bemenu? (use wmenu instead)
+- htop? (use bottom[https://github.com/ClementTsang/bottom] or zenith[https://github.com/bvaisvil/zenith] instead)
+- translate-shell?
+- unar?
+- ffmpeg?
+- net-tools?
+- scc?
+- tzutils?
+- sc-im?
+- fd?
+- amber?
+- exa?
+
+- zathura
+- bat?
+
+After installing packages with cygwin, don't run cygwin terminal, you should use cmd. but to use cygwin binaries you need to add C:\cygwin64\bin to your ENV.
+
 # Windows Basics
 - Default user directory: `C:\Users\<user-name>`
 - Switch to it: `cd ~` or `cd`
@@ -53,8 +133,17 @@ As of version 0.9.8.24, binaries, libraries and Chocolatey components will insta
 * Environment Variable `%ProgramData%` by default.
 
 ## Tor
+First you should download torbrowser(because it contains obfs4proxy.exe).
+
+obfs4proxy is located here:
+`E:\Tor Browser\Browser\TorBrowser\Tor\PluggableTransports\obfs4proxy`
+
+You need it since in your torrc, you need bridges.
+
 - Download Tor-Expert-Bundle:
 https://www.torproject.org/dist/torbrowser/10.0/tor-win32-0.4.3.6.zip
+
+C:\tor\Tor\tor.exe -f "C:\tor\Tor\torrc"
 
 - Unzip it, and install as as service:
 
@@ -65,8 +154,7 @@ https://www.torproject.org/dist/torbrowser/10.0/tor-win32-0.4.3.6.zip
     `C:\Tor\tor.exe -f "C:\Tor\torrc"`
 
 - Now install the Tor service, which will read the settings from the C:\Tor\torrc file:
-
-    `C:\Tor\tor.exe --service install -options -f "C:\Tor\torrc"`
+	`gsudo C:\tor\Tor\tor.exe --service install -options -f "C:\tor\Tor\torrc"`
 
 * Remember that you must specify options after the -options flag, otherwise they will be ignored.
 - To start and stop the service, use the following commands:
@@ -204,16 +292,6 @@ Shared components, tools, sdk:
 
 Build Tools:
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
-
-# Alternatives
-- htop
-- ranger
-- dmenu
-- tmux
-
-# Should be in windows
-- zathura
-- translate-shell
 
 # TODO
 ## Neovim Issue

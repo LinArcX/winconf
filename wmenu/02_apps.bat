@@ -1,7 +1,7 @@
 @echo off
 
 set apps=Brave(browser);Powershell(pwsh, shell);File Manager(gui, explorer);Visual Studio 2019;Emacs(runemacs);Notepad++;Anki;TorBrowser;Zeal;Calculator(speedcrunch);QBitTorrent;Uget(Download Manager);AnyDesk(remote desktop);ChocoCleaner;CmakeGui;DependencyWalker;ProcessExplorer;WindowDetective;RegEdit;LocalGroupPolicyEditor(gpedit.msc);Notepad;Paint;Cmd;Clavier+;RecycleBin;ProgramsAndFeatures;DateTime;ComputerManagment;
-start /B wmenu.exe -elements "%apps%" -prompt "Apps: " -fontName "Cascadia Code" -fontSize 8 -caseInsensitive -lineNumber 8 | more > %temp%/apps.txt
+start /B wmenu.exe -element-delimiter ";" -elements "%apps%" -prompt "Apps: " -fontName "Cascadia Code" -fontSize 8 -caseInsensitive -lineNumber 8 | more > %temp%/apps.txt
 
 for /f "tokens=*" %%s in (%temp%\apps.txt) do (
   IF "%%s"=="Brave(browser)" (

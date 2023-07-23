@@ -1,82 +1,91 @@
-# Prerequisites
-- Clavier+
-- Clink
-- Git
+# Software and applications
+My philosophy is to use these software as much as i can:
+- free/open source software
+- terminal based applications as possible. 
+- don't use emulation software, like cygwin or msys2.
+- avoid software from microsoft like vscode, terminal, etc.. use more free alternative.
+- use software that were written with native windows technologies like win32. c/c++/rust applications are the best.
+- in some cases it's better to use GUI applications.
+
+## Prerequisites
+- wezterm as terminal emulator [https://wezfurlong.org/wezterm/] - replacement of tmux
+- cmd as shell
+- clink as shell enhancement tool
+- uutils as coreutils replacement [https://github.com/uutils/coreutils]
+- lf as file manager [https://github.com/gokcehan/lf/releases]
+- neovim as editor
+- clavier+
+- brave
+- git
 - 7Zip
-- Nomacs
-- Flameshot
-- Okular
-- Notepad++
-- Brave
+- nomacs
+- okular
+- flameshot
+- notepad++
 - OBS Studio
 - QBitTorrent
 - anki
-- wmenu [https://github.com/LinArcX/wmenu]
-- lf [https://github.com/gokcehan/lf/releases]
+- wmenu [https://github.com/LinArcX/wmenu] - replacement of dmenu/bemenu
 - ripgrep [https://github.com/BurntSushi/ripgrep/releases]
-- Cygwin
-	- arc
-	- ascii
-	- atool
-	- bash
-	- bc
-	- bvi
-	- bzip3
-	- cgdb
-	- cloc
-	- colordiff
-	- colorgcc
-	- cppcheck
-	- coreutils
-	- cpuid
-	- cscope
-	- ctags
-	- ctris
-	- curl
-	- diffstat
-	- diffutils
-	- dog
-	- dos2unix
-	- doxygen
-	- duff
-	- enca
-	- gdb
-	- gcc-core
-	- gcc-g++
-	- xxd
-	- tar
-	- p7zip 
-	- zip 
-	- unzip
-	- xz
-	- zstd
-	- mediainfo
-	- rsync
-	- fzf
-	- fzf-bash
-	- fzf-bash-completion
-	- jq
-	
-# packages not available
-- tmux? ([wezterm](https://wezfurlong.org/wezterm/))
-- bemenu? (use wmenu instead)
-- htop? (use bottom[https://github.com/ClementTsang/bottom] or zenith[https://github.com/bvaisvil/zenith] instead)
-- eva? (i should create a native win32 and replace it with bc from cygwin)
-- translate-shell?
-- unar?
-- ffmpeg?
-- net-tools?
-- scc?
-- tzutils?
-- sc-im?
-- fd?
-- amber?
-- exa?
+- bottom[https://github.com/ClementTsang/bottom] or zenith[https://github.com/bvaisvil/zenith] - replacement ot top
+
+## Optional
+- fzf
+- fzf-bash
+- fzf-bash-completion
+- jq
+
+## Packages that may not available
+- eva
+- translate-shell
+- unar
+- ffmpeg
+- net-tools
+- scc
+- tzutils
+- sc-im
+- fd
+- amber
+- exa
 - zathura
 - bat?
-
-After installing packages with cygwin, don't run cygwin terminal, since cygwin has bash as shell. we need cmd and for terminal emulator, we can use wezterm.
-For using cygwin binaries you need to add C:\cygwin64\bin to your ENV.
+- arc
+- ascii
+- atool
+- bash
+- bc
+- bvi
+- bzip3
+- cgdb
+- cloc
+- colordiff
+- colorgcc
+- cppcheck
+- coreutils
+- cpuid
+- cscope
+- ctags
+- ctris
+- curl
+- diffstat
+- diffutils
+- dog
+- dos2unix
+- doxygen
+- duff
+- enca
+- gdb
+- gcc-core
+- gcc-g++
+- xxd
+- tar
+- p7zip 
+- zip 
+- unzip
+- xz
+- zstd
+- mediainfo
+- rsync
 
 # Windows Basics
 - Default user directory: `C:\Users\<user-name>`
@@ -311,6 +320,10 @@ Source: https://github.com/mridgers/clink/issues/324
 # TODO
 ## Neovim Issue
 - Icons doesn't appear.
+- setup fzf. (git actions)
+- open explorer when press WIN+Enter in specific directory without third party software. (in maximized)
+- open wezTerm in maximized
+- setup prompt for clink
 
 ## Windows
 - Set default apps and extensions like mimeapps in linux via powershell.

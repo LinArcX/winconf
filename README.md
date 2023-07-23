@@ -293,6 +293,21 @@ Shared components, tools, sdk:
 Build Tools:
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
 
+# Hide "All rights reserved" message in CMD
+This is sort-of possible, but there may be consequences. cmd.exe looks at two registry values (type REG_SZ or REG_EXPAND_SZ) when starting up:
+
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun`
+`HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun`
+Simply put cls in one of them and cmd.exe will automatically wipe the copyright notice, still leaving an empty line unfortunately.
+
+Whether this could interfere with running batch files somehow, I don’t know. You’ll have to try. Fortunately, the change is easily reversible.
+
+Source: https://superuser.com/questions/1723381/hide-all-rights-reserved-message-in-cmd-in-terminal
+
+# Disable startup message in clink
+`clink autorun install -- --quiet`
+Source: https://github.com/mridgers/clink/issues/324
+
 # TODO
 ## Neovim Issue
 - Icons doesn't appear.

@@ -58,10 +58,10 @@
 	- jq
 	
 # packages not available
-- tmux? (i should create a native win32)
-- eva? (i should create a native win32 and replace it with bc from cygwin)
+- tmux? ([wezterm](https://wezfurlong.org/wezterm/))
 - bemenu? (use wmenu instead)
 - htop? (use bottom[https://github.com/ClementTsang/bottom] or zenith[https://github.com/bvaisvil/zenith] instead)
+- eva? (i should create a native win32 and replace it with bc from cygwin)
 - translate-shell?
 - unar?
 - ffmpeg?
@@ -72,11 +72,11 @@
 - fd?
 - amber?
 - exa?
-
 - zathura
 - bat?
 
-After installing packages with cygwin, don't run cygwin terminal, you should use cmd. but to use cygwin binaries you need to add C:\cygwin64\bin to your ENV.
+After installing packages with cygwin, don't run cygwin terminal, since cygwin has bash as shell. we need cmd and for terminal emulator, we can use wezterm.
+For using cygwin binaries you need to add C:\cygwin64\bin to your ENV.
 
 # Windows Basics
 - Default user directory: `C:\Users\<user-name>`

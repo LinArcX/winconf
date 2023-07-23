@@ -1,17 +1,18 @@
 # Software and applications
 My philosophy is to use these software as much as i can:
 - free/open source software
-- terminal based applications as possible. 
+- terminal based applications as possible.
 - don't use emulation software, like cygwin or msys2.
 - avoid software from microsoft like vscode, terminal, etc.. use more free alternative.
 - use software that were written with native windows technologies like win32. c/c++/rust applications are the best.
 - in some cases it's better to use GUI applications.
 
 ## Prerequisites
-- wezterm as terminal emulator [https://wezfurlong.org/wezterm/] - replacement of tmux
-- cmd as shell
-- clink as shell enhancement tool
-- uutils as coreutils replacement [https://github.com/uutils/coreutils]
+- wezterm [https://wezfurlong.org/wezterm/] - replacement of tmux
+- cmd
+- clink
+- uutils [https://github.com/uutils/coreutils]
+- broot
 - lf as file manager [https://github.com/gokcehan/lf/releases]
 - neovim as editor
 - clavier+
@@ -25,9 +26,9 @@ My philosophy is to use these software as much as i can:
 - OBS Studio
 - QBitTorrent
 - anki
-- wmenu [https://github.com/LinArcX/wmenu] - replacement of dmenu/bemenu
+- wmenu [https://github.com/LinArcX/wmenu]
 - ripgrep [https://github.com/BurntSushi/ripgrep/releases]
-- bottom[https://github.com/ClementTsang/bottom] or zenith[https://github.com/bvaisvil/zenith] - replacement ot top
+- bottom[https://github.com/ClementTsang/bottom] or zenith[https://github.com/bvaisvil/zenith]
 
 ## Optional
 - fzf
@@ -79,8 +80,8 @@ My philosophy is to use these software as much as i can:
 - gcc-g++
 - xxd
 - tar
-- p7zip 
-- zip 
+- p7zip
+- zip
 - unzip
 - xz
 - zstd
@@ -448,7 +449,7 @@ Q: How disable Ctrl+Alt+down and Ctrl+Alt+up?
 A: Right click on "Intel Hd Graphics" in system tray. Graphic opitons > HotKeys > Disable.
 
 Q: How make notepad++ as default editor?
-A: 
+A:
 
 Q: How remove pinned items from QuickAccess?
 A: Just click on QuickAcces button in file explorer to open it. And then right click on every item that you want to unpin.

@@ -1,19 +1,17 @@
 @echo off
 
-set apps=Brave(browser);Powershell(pwsh, shell);File Manager(gui, explorer);Visual Studio 2019;Emacs(runemacs);Notepad++;Anki;TorBrowser;Zeal;Calculator(speedcrunch);QBitTorrent;Uget(Download Manager);AnyDesk(remote desktop);ChocoCleaner;CmakeGui;DependencyWalker;ProcessExplorer;WindowDetective;RegEdit;LocalGroupPolicyEditor(gpedit.msc);Notepad;Paint;Cmd;Clavier+;RecycleBin;ProgramsAndFeatures;DateTime;ComputerManagment;
-start /B wmenu.exe -element-delimiter ";" -elements "%apps%" -prompt "Apps: " -fontName "Cascadia Code" -fontSize 8 -caseInsensitive -lineNumber 8 | more > %temp%/apps.txt
+set apps=Brave;SystemProperties;Powershell(pwsh);File Manager;Notepad++;Anki;TorBrowser;Zeal;Calculator(speedcrunch);QBitTorrent;Uget(Download Manager);DependencyWalker;ProcessExplorer;WindowDetective;RegEdit;LocalGroupPolicyEditor(gpedit.msc);Notepad;Paint;Cmd;Clavier+;RecycleBin;ProgramsAndFeatures;DateTime;ComputerManagment;
+start /B wmenu.exe -element-delimiter ";" -elements "%apps%" -prompt "Apps: " -fontName "FiraCode Nerd Font Mono" -fontSize 8 -caseInsensitive -lineNumber 8 | more > %temp%/apps.txt
 
 for /f "tokens=*" %%s in (%temp%\apps.txt) do (
-  IF "%%s"=="Brave(browser)" (
+  IF "%%s"=="Brave" (
 	"C:\Users\saeed\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe"
-  ) ELSE IF "%%s"=="Powershell(pwsh, shell)" (
+  ) ELSE IF "%%s"=="SystemProperties" (
+	start sysdm.cpl
+  ) ELSE IF "%%s"=="Powershell(pwsh)" (
 	start pwsh
-  ) ELSE IF "%%s"=="File Manager(gui, explorer)" (
+  ) ELSE IF "%%s"=="File Manager" (
 	start explorer
-  ) ELSE IF "%%s"=="Visual Studio 2019" (
-	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe"
-  ) ELSE IF "%%s"=="Emacs(runemacs)" (
-	"C:\Program Files\Emacs\emacs-28.1\bin\runemacs.exe"
   ) ELSE IF "%%s"=="Notepad++" (
 	start %%s
   ) ELSE IF "%%s"=="Anki" (
@@ -28,12 +26,6 @@ for /f "tokens=*" %%s in (%temp%\apps.txt) do (
 	"C:\Program Files\qBittorrent\qbittorrent.exe"
   ) ELSE IF "%%s"=="Uget(Download Manager)" (
 	"C:\ProgramData\chocolatey\bin\uget.exe"
-  ) ELSE IF "%%s"=="AnyDesk(remote desktop)" (
-	"C:\Program Files (x86)\AnyDesk\AnyDesk.exe"
-  ) ELSE IF "%%s"=="ChocoCleaner" (
-	pwsh -c  gsudo choco-cleaner.bat 
-  ) ELSE IF "%%s"=="CmakeGui" (
-	"C:\Program Files\CMake\bin\cmake-gui.exe"
   ) ELSE IF "%%s"=="DependencyWalker" (
 	"C:\ProgramData\chocolatey\lib\dependencywalker\content\depends.exe"
   ) ELSE IF "%%s"=="ProcessExplorer" (
@@ -66,7 +58,5 @@ for /f "tokens=*" %%s in (%temp%\apps.txt) do (
 	REM default case...
   )
 )
-
-
 
 del "%temp%\apps.txt"

@@ -1,59 +1,45 @@
-# Software and applications
-My philosophy is to use these software as much as i can:
-- free/open source software
-- terminal based applications as possible.
-- don't use emulation software, like cygwin or msys2.
-- avoid software from microsoft like vscode, terminal, etc.. use more free alternative.
-- use software that were written with native windows technologies like win32. c/c++/rust applications are the best.
-- in some cases it's better to use GUI applications.
+# Philosophy
+I tend to follow these ideas as much as i can:
+- Using Free/Open source software.
+- Using Terminal-based applications.
+- Not using emulated software like: cygwin or msys2.
+- Avoid using software from microsoft like vscode, terminal, etc.. use more free alternative.
+- Using software that are written with native windows technologies like win32. c/c++/rust applications are the best.
+- In some cases it's better to use GUI applications.(like web-browsers)
 
-## Prerequisites
-- wezterm [https://wezfurlong.org/wezterm/] - replacement of tmux
+# Prerequisites
 - cmd
-- clink
-- uutils [https://github.com/uutils/coreutils]
-- broot
-- lf as file manager [https://github.com/gokcehan/lf/releases]
-- neovim as editor
-- clavier+
-- brave
-- git
-- 7Zip
-- nomacs
-- okular
-- flameshot
-- notepad++
-- OBS Studio
-- QBitTorrent
-- anki
 - wmenu [https://github.com/LinArcX/wmenu]
-- ripgrep [https://github.com/BurntSushi/ripgrep/releases]
-- bottom[https://github.com/ClementTsang/bottom] or zenith[https://github.com/bvaisvil/zenith]
+- scoop
+  gsudo lf uutils-coreutils 7zip alacritty brave flameshot mpv nomacs okular ffmpeg speedcrunch unar winrar youtube-dl mediainfo
+  clavier-plus clink clink-completions clink-flex-prompt
+  git fd grep llvm neovim lite-xl fzf dependencies openssh regdllview scc ripgrep ugrep bottom(btm)
 
 ## Optional
-- fzf
+- anki
+- jq
+- broot
+- QBitTorrent
+- OBS Studio
 - fzf-bash
 - fzf-bash-completion
-- jq
+- wezterm [https://wezfurlong.org/wezterm/] - replacement of tmux
 
 ## Packages that may not available
-- eva
-- translate-shell
-- unar
-- ffmpeg
-- net-tools
-- scc
-- tzutils
-- sc-im
-- fd
 - amber
 - exa
-- zathura
+- eva
 - bat?
+- rsync
+- translate-shell
+- net-tools
+- tzutils
+- tar
+- sc-im
+- zathura
 - arc
 - ascii
 - atool
-- bash
 - bc
 - bvi
 - bzip3
@@ -79,41 +65,34 @@ My philosophy is to use these software as much as i can:
 - gcc-core
 - gcc-g++
 - xxd
-- tar
 - p7zip
 - zip
 - unzip
 - xz
 - zstd
-- mediainfo
-- rsync
+- bash
 
 # Windows Basics
-- Default user directory: `C:\Users\<user-name>`
-- Switch to it: `cd ~` or `cd`
-- Switch to root of current drive: `cd /`
-- `cd %AppData%` just work in cmd. In powershell, you should use: `cd $env:APPDATA`
-- To power-off the computer: `shutdown /p` or Stop-Computer
-- To restart the computer: `shutdown /r` or Restart-Computer
-- Default config folder (equivalent to `~/.config` in __*nix-based__ os):
-
-    `C:\Users\linarcx\AppData\Local`
-- Switch to it:
-
-    `cd $env:LOCALAPPDATA`
+- User home directory or user profile(%USERPROFILE%) is located: `C:\Users\<username>`
+  You can Switch to it by: `~`
+- Switch to root of current drive: `/` or `cd /`
+- Switch to application directory: `cd %AppData%`.
+  In powershell: `cd $env:APPDATA`
+- To power-off the computer: `shutdown /p` 
+  In powershell: Stop-Computer
+- To restart the computer: `shutdown /r`
+  In powershell: Restart-Computer
+- Default config folder (equivalent to `~/.config` in __*nix-based__ os) is located: `C:\Users\linarcx\AppData\Local`
+  You can switch to it by: `cd %LOCALAPPDATA%`
+  In powershell: `cd $env:LOCALAPPDATA`
 - To start an application at start-up, you should put it's shortcut here:
-
-    `C:\Users\linarcx\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
-
-    To do that, hit: `Win+R` and type: `shell:startup`
+   `C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+    Instead of browsing with file explorer, you can hit: `Win+R` and type: `shell:startup`
 
 ## SymLinks, HardLinks, ShortCuts
 - Create symlinks:
-
     `new-item -itemtype SymbolicLink -path <path to location> -name <the name> -value <path to target>`
-
     For example:
-
     `New-Item -ItemType SymbolicLink -Path "C:\Users\linarcx\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
 
 - Create HardLinks:
@@ -121,11 +100,11 @@ My philosophy is to use these software as much as i can:
 
 Tip: To manage your dot-files, always use __SymbolicLink_.
 
-# Services
+## Services
 Search for a service:
 `Get-Service  | grep Event`
 
-Start Service:
+### Start a service
 `Start-Service EventLog`
 
 ## Delete a service
@@ -135,13 +114,6 @@ gsudo sc delete tor
 ```
 
 # Configuring Special Software
-## Chocolatey
-As of version 0.9.8.24, binaries, libraries and Chocolatey components will install:
-
-`C:\ProgramData\chocolatey`
-
-* Environment Variable `%ProgramData%` by default.
-
 ## Tor
 First you should download torbrowser(because it contains obfs4proxy.exe).
 

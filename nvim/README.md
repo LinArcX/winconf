@@ -1,5 +1,18 @@
-Put me here:
-%USERPROFILE%\AppData\Local
+# Windows
+You should put all this folder in here:
+`%USERPROFILE%\AppData\Local`
+
+## Prerequisites
+Current configurations depends on treesitter and treesitter by itself depends on having a c compiler on the system.
+So you can install llvm that contains clang:
+`scoop install llvm`
+
+And then add this path to env:
+`%USERPROFILE%\scoop\apps\llvm\current\bin`
+
+Then open nvim:
+`:TSInstall lua`
+`:TSUpdate`
 
 # fix colorshceme in diff mode
 ```

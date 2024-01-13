@@ -451,6 +451,9 @@ A: Right click on "Intel Hd Graphics" in system tray. Graphic opitons > HotKeys 
 Q: How make notepad++ as default editor?
 A:
 
+Q: How to Change Win + E Shortcut Target in Windows 10/11?
+A: https://www.winhelponline.com/blog/winkey-e-shortcut-target-change/
+
 Q: How remove pinned items from QuickAccess?
 A: Just click on QuickAcces button in file explorer to open it. And then right click on every item that you want to unpin.
 

@@ -1,6 +1,6 @@
 @echo off
 
-set dirs=C:\,%USERPROFILE%,%APPDATA%,%LOCALAPPDATA%,%TEMP%,^
+set dirs=C:\,%USERPROFILE%,%APPDATA%,%LOCALAPPDATA%,shell:startup,recycle bin,%TEMP%,^
 .ssh,nvim,lf,mpv,alacritty.yml,Clavier.ini,Downloads,^
 D:\,video(D:\),E:\,video(E:\),^
 winconf,wmenu,kaveh,pardis,^
@@ -13,6 +13,8 @@ for /f "tokens=*" %%s in (%temp%\dirs.txt) do (
   if "%%s"=="%USERPROFILE%" ( start %USERPROFILE% )
   if "%%s"=="%APPDATA%" ( start %APPDATA% )
   if "%%s"=="%LOCALAPPDATA%" ( start %LOCALAPPDATA% )
+  if "%%s"=="shell:startup" ( start shell:startup )
+  if "%%s"=="recycle bin" ( start shell:RecycleBinFolder )
   if "%%s"=="%TEMP%" ( start %TEMP% )
 
   if "%%s"==".ssh" ( start %USERPROFILE%\.ssh )

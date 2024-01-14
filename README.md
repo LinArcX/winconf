@@ -40,6 +40,7 @@ I tend to follow these ideas as much as i can:
 - exa
 - gf
 - net-tools
+- procexp64
 - sc-im
 - translate-shell
 - tzutils

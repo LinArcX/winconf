@@ -1,6 +1,6 @@
 @echo off
 
-start /B wmenu.exe -prompt "Output: " -fontName "Cascadia Code" -fontSize 8 | more > %temp%/screenshot_output.txt
+start /B wmenu.exe -prompt "Output: " -fontName "Cascadia Code PL" -fontSize 9 | more > %temp%/screenshot_output.txt
 
 for /f "tokens=*" %%s in (%temp%\screenshot_output.txt) do (
   cd /d "%USERPROFILE%\Desktop"
@@ -9,6 +9,3 @@ for /f "tokens=*" %%s in (%temp%\screenshot_output.txt) do (
 )
 
 del "%temp%\screenshot_output.txt"
-
-
-

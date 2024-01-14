@@ -1,0 +1,6 @@
+C:\
+D:\
+E:\
+%USERPROFILE% 
+%APPDATA%
+kaveh

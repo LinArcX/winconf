@@ -4,6 +4,7 @@
   - FZF_DEFAULT_OPTS : --layout=reverse --border --cycle
   - FZF_DEFAULT_COMMAND: rg --files --no-ignore --hidden --follow --glob "!.git/*"
   - FZF_CTRL_U_COMMAND: ls -ltrah --color=auto
+  - FZF_COMPLETION_AUTO_COMMON_PREFIX: true
 
 # TODO
 - [] create menu of applications using fzf and batch scripts.

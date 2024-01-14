@@ -48,13 +48,14 @@ I tend to follow these ideas as much as i can:
 - zathura
 
 # Windows Basics
-- User home directory or user profile(%USERPROFILE%) is located: `C:\Users\<username>`
-  You can Switch to it by: `~`
+- User home directory or user profile(`%USERPROFILE%`) is located: `C:\Users\<username>`
+  - You can Switch to it by: `~`
 - Switch to root of current drive: `/` or `cd /`
 - Switch to application directory: `cd %AppData%`.
+
   In powershell: `cd $env:APPDATA`
 - To power-off the computer: `shutdown /p` 
-  In powershell: Stop-Computer
+  - In powershell: Stop-Computer
 - To restart the computer: `shutdown /r`
   In powershell: Restart-Computer
 - Default config folder (equivalent to `~/.config` in __*nix-based__ os) is located: `C:\Users\linarcx\AppData\Local`
@@ -119,30 +120,48 @@ Tip: To manage your dot-files, always use __SymbolicLink_.
   `Windows key + Minus (-)`
 - Exit magnifier:
   `Windows key + Esc`
-
-Windows key + X 	Quick Link menu.
-Windows key + X + a Open default PowerShell.
-Windows key + PrtScn 	Capture full screenshot in the "Screenshots" folder.
-Windows key + Shift + S 	Capture part of the screen with Snip & Sketch.
-Windows key + Period (.) or semicolon (;) 	Open emoji panel.
-Windows key + Left arrow key 	Snap app or window left.
-Windows key + Right arrow key 	Snap app or window right.
-Windows key + V 	Open Clipboard bin.
-Windows key + A 	Open Action center.
-Windows key + Tab 	Open Task View.
-Windows key + Ctrl + D 	Create a virtual desktop.
-Windows key + Ctrl + F4 	Close active virtual desktop.
-Windows key + Ctrl + Right arrow 	Switch to the virtual desktop on the right.
-Windows key + Ctrl + Left arrow 	Switch to the virtual desktop on the left.
-Ctrl + Shift + Esc 	Open Task Manager.
-Ctrl + Alt + Tab 	View open apps.
+- Quick Link menu:
+  `Windows key + X`
+- Open default PowerShell:
+  `Windows key + X + a`
+- Capture full screenshot in the "Screenshots" folder:
+  `Windows key + PrtScn`
+- Capture part of the screen with Snip & Sketch:
+  `Windows key + Shift + S`
+- Open emoji panel:
+  `Windows key + Period (.) or semicolon (;)`
+- Snap app or window left:
+  `Windows key + Left arrow key`
+- Snap app or window right:
+  `Windows key + Right arrow key`
+- Open Clipboard bin:
+  `Windows key + V`
+- Open Action center:
+  `Windows key + A`
+- Open Task View:
+  `Windows key + Tab`
+- Create a virtual desktop:
+  `Windows key + Ctrl + D`
+- Close active virtual desktop:
+  `Windows key + Ctrl + F4`
+- Switch to the virtual desktop on the right:
+  `Windows key + Ctrl + Right arrow`
+- Switch to the virtual desktop on the left:
+  `Windows key + Ctrl + Left arrow`
+- Open Task Manager:
+  `Ctrl + Shift + Esc`
+- View open apps:
+  `Ctrl + Alt + Tab`
 
 # Run commands
-- "\": Open the Windows 10 drive.
-- ".": Open the Home folder of the current user.
-- "..": Open the Users folder.
+- Open the Windows 10 drive:
+  `\`
+- Open the Home folder of the current user:
+  `.`
+- Open the Users folder:
+  `..`
 
 # References
-- https://github.com/git-for-windows/git/wiki/Symbolic-Links#allowing-non-administrators-to-create-symbolic-links
-- https://www.windowscentral.com/best-windows-10-keyboard-shortcuts
 - https://www.maketecheasier.com/20-run-commands-windows/
+- https://www.windowscentral.com/best-windows-10-keyboard-shortcuts
+- https://github.com/git-for-windows/git/wiki/Symbolic-Links#allowing-non-administrators-to-create-symbolic-links

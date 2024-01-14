@@ -16,7 +16,7 @@ I tend to follow these ideas as much as i can:
   mpv nomacs ffmpeg mediainfo mpg123 flameshot
   brave qbittorrent uget youtube-dl curl dog
   clavier-plus clink clink-completions clink-flex-prompt uutils-coreutils
-  git fd grep bat llvm neovim dependencies openssh regdllview scc ripgrep ugrep jq tar zeal doxygen dos2unix cppcheck cscope delta diffutils gdb
+  git fd grep bat llvm neovim dependencies openssh regdllview scc ripgrep ugrep jq tar zeal doxygen dos2unix cppcheck cscope delta diffutils gdb drmemory
 
 ## Optional
 - broot
@@ -26,7 +26,11 @@ I tend to follow these ideas as much as i can:
 - wezterm [https://wezfurlong.org/wezterm/] - replacement of tmux
 
 ## Packages that may not available
+- windbg
+- procexp64
+
 - amber
+- splint
 - ascii
 - atool
 - bvi
@@ -40,11 +44,9 @@ I tend to follow these ideas as much as i can:
 - exa
 - gf
 - net-tools
-- procexp64
 - sc-im
 - translate-shell
 - tzutils
-- windbg
 - xxd
 - zathura
 

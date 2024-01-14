@@ -4,7 +4,7 @@ set apps=brave,lite xl,speedcrunch,anki,zeal,qbittorrent,uget,tor browser,clavie
 powershell(pwsh),cmd,paint,regedit,^
 dependencies,window detective,^
 system properties,system information,system configuration,control panel,programs and features,services,network adapters,date and time,^
-performance monitor,resource monitor,remote desktop,component services,event viewer,computer managment,group policy editor(gpedit.msc),malicious software removal tool
+power options,resource monitor,performance monitor,remote desktop,component services,event viewer,firewall,local users and groups manager,device manager,mouse settings,computer managment,advanced user accounts,group policy editor(gpedit.msc),malicious software removal tool
 
 start /B wmenu.exe -elements "%apps%" -prompt "Apps: " -fontName "Cascadia Code PL" -fontSize 9 -caseInsensitive -lineNumber 10 | more > %temp%/apps.txt
 
@@ -37,20 +37,19 @@ for /f "tokens=*" %%s in (%temp%\apps.txt) do (
   if "%%s"=="network adapters" ( start ncpa.cpl )
   if "%%s"=="date and time" ( start timedate.cpl ) 
 
+  if "%%s"=="power options" ( start powercfg.cpl)
   if "%%s"=="resource monitor" ( start resmon)
   if "%%s"=="performance monitor" ( start perfmon.msc)
   if "%%s"=="remote desktop" ( start mstsc)
   if "%%s"=="component services" ( start dcomcnfg)
   if "%%s"=="event viewer" ( start eventvwr.msc)
+  if "%%s"=="firewall" ( start firewall.cpl)
+  if "%%s"=="local users and groups manager" ( start lusrmgr.msc)
+  if "%%s"=="device manager" ( start devmgmt.msc)
+  if "%%s"=="mouse settings" ( main.cpl )
   if "%%s"=="computer managment" ( start compmgmt.msc)
+  if "%%s"=="advanced user accounts" ( start netplwiz)
   if "%%s"=="group policy editor(gpedit.msc)" ( gpedit.msc )
   if "%%s"=="malicious software removal tool" ( start mrt )
 )
 del "%temp%\apps.txt"
-
-REM - "powercfg.cpl": Power Options.
-REM - "netplwiz": Advanced User Accounts window.
-REM - "devmgmt.msc": Windows Device Manager.
-REM - "firewall.cpl": Windows Firewall.
-REM - "lusrmgr.msc": Local Users and Groups Manager.
-REM - "main.cpl": Adjust your mouse settings.

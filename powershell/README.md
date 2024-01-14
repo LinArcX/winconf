@@ -41,3 +41,7 @@ You can open it like this: `nvim $profile`
 
 ## Move file to a directory
 `Move-Item -Path <source-file> -Destination <dest-directory>`
+
+## Refrences
+- https://ss64.com/ps/syntax-env.html
+- https://medium.com/@vhanla/agnoster-like-theme-for-powershell-95d257ba9ba8

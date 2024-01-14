@@ -101,3 +101,9 @@ community.
 
 ## Plugins
   Here i will describe my plugins.
+
+# Resources
+https://github.com/RRethy/vim-illuminate/issues/177
+https://github.com/LunarVim/LunarVim/issues/3680
+https://github.com/LunarVim/Neovim-from-scratch/issues/274
+https://www.reddit.com/r/neovim/comments/14oozmu/neovim_cant_find_c_compiler/

@@ -49,3 +49,10 @@ Shared components, tools, sdk:
 
 Build Tools:
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
+
+## Resources
+https://stackoverflow.com/questions/41914013/how-can-i-make-a-win32-app-with-no-dependency-on-the-msvc-dll
+https://devtalk.blender.org/t/error-after-debug-vsdevcmd-bat-calling-ext/25990
+https://www.reddit.com/r/cpp_questions/comments/xydqmj/can_i_work_on_a_desktop_application_using_the/
+https://copyprogramming.com/howto/compiling-a-win32-gui-app-without-a-console-using-mingw-and-eclipse
+https://github.com/flutter/flutter/issues/77638

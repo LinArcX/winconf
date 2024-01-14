@@ -39,3 +39,6 @@ C:\tor\Tor\tor.exe -f "C:\tor\Tor\torrc"
 * By default, the Tor service listens on port 9050.
     So you can check whether it is started by a command that shows if port 9050 is listened:
     `netstat -aon | findstr ":9050"`
+
+## Refrences
+- https://miloserdov.org/?p=1839

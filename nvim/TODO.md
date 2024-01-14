@@ -3,3 +3,4 @@
 - [] open explorer when press WIN+Enter in specific directory without third party software. (in maximized)
 - [] open wezTerm in maximized
 - [] setup prompt for clink
+- [] create a keybinding to remove all trailing spaces from current file.

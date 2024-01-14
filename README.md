@@ -11,13 +11,15 @@ I tend to follow these ideas as much as i can:
 - cmd
 - wmenu [https://github.com/LinArcX/wmenu]
 - scoop
-  gsudo lf uutils-coreutils 7zip alacritty brave flameshot mpv nomacs okular ffmpeg speedcrunch unar winrar youtube-dl mediainfo mpg123 anki
-  clavier-plus clink clink-completions clink-flex-prompt
-  git fd grep llvm neovim lite-xl fzf dependencies openssh regdllview scc ripgrep ugrep bottom(btm) jq tar
+  7zip arc unar winrar zip unzip xz zstd
+  gsudo alacritty lf fzf lite-xl okular speedcrunch anki cwrsync bottom(btm)
+  mpv nomacs ffmpeg mediainfo mpg123 flameshot
+  brave qbittorrent uget youtube-dl curl dog
+  clavier-plus clink clink-completions clink-flex-prompt uutils-coreutils
+  git fd grep bat llvm neovim dependencies openssh regdllview scc ripgrep ugrep jq tar zeal doxygen dos2unix cppcheck cscope delta diffutils gdb
 
 ## Optional
 - broot
-- QBitTorrent
 - OBS Studio
 - fzf-bash
 - fzf-bash-completion
@@ -25,49 +27,25 @@ I tend to follow these ideas as much as i can:
 
 ## Packages that may not available
 - amber
-- exa
-- eva
-- bat?
-- rsync
-- translate-shell
-- net-tools
-- tzutils
-- sc-im
-- zathura
-- arc
 - ascii
 - atool
-- bc
 - bvi
 - bzip3
 - cgdb
-- cloc
 - colordiff
 - colorgcc
-- cppcheck
-- coreutils
 - cpuid
-- cscope
-- ctags
-- ctris
-- curl
-- diffstat
-- diffutils
-- dog
-- dos2unix
-- doxygen
 - duff
 - enca
-- gdb
-- gcc-core
-- gcc-g++
+- exa
+- gf
+- net-tools
+- sc-im
+- translate-shell
+- tzutils
+- windbg
 - xxd
-- p7zip
-- zip
-- unzip
-- xz
-- zstd
-- bash
+- zathura
 
 # Windows Basics
 - User home directory or user profile(%USERPROFILE%) is located: `C:\Users\<username>`
@@ -98,7 +76,8 @@ I tend to follow these ideas as much as i can:
 Tip: To manage your dot-files, always use __SymbolicLink_.
 
 ## Other
-- `Alt + F7`: Clears the command history.
+- Clears the command history:
+  `Alt + F7`
 - `Ctrl + C`: Break out of the subprompt or terminate execution.
 - `Ctrl + End` : Delete all the characters in the line after the cursor.
 - `Ctrl + Left Arrow || Ctrl + Right Arrow` : Move left or right one word at a time.
@@ -119,17 +98,28 @@ Tip: To manage your dot-files, always use __SymbolicLink_.
     To copy the screen buffer to the Clipboard, right-click, choose Select, and then press Enter.
 - `Tab / Shift+Tab`: Press the Tab key or press Shift+Tab to access the tab expansion function, which include folder or filename autocompletion.
 
-# Windows shortcuts
-Windows key + I 	Open Settings app.
-Windows key + E 	Open File Explorer.
-Windows key + D 	Display and hide the desktop.
-Windows key + M 	Minimize all windows.
-Windows key + Shift + M Restore minimized windows on the desktop.
-Windows key + L 	Lock device.
-Windows key + W 	Open the Windows Ink Workspace.
-Windows key + Plus (+) 	Zoom in using the magnifier.
-Windows key + Minus (-) 	Zoom out using the magnifier.
-Windows key + Esc 	Exit magnifier.
+# Shortcuts
+- Open Settings app:
+  `Windows key + I`
+- Open File Explorer:
+  `Windows key + E`
+- Display and hide the desktop:
+  `Windows key + D`
+- Minimize all windows:
+  `Windows key + M`
+- Restore minimized windows on the desktop:
+  `Windows key + Shift + M`
+- Lock device:
+  `Windows key + L`
+- Open the Windows Ink Workspace:
+  `Windows key + W`
+- Zoom in using the magnifier:
+  `Windows key + Plus (+)`
+- Zoom out using the magnifier:
+  `Windows key + Minus (-)`
+- Exit magnifier:
+  `Windows key + Esc`
+
 Windows key + X 	Quick Link menu.
 Windows key + X + a Open default PowerShell.
 Windows key + PrtScn 	Capture full screenshot in the "Screenshots" folder.
@@ -139,13 +129,11 @@ Windows key + Left arrow key 	Snap app or window left.
 Windows key + Right arrow key 	Snap app or window right.
 Windows key + V 	Open Clipboard bin.
 Windows key + A 	Open Action center.
-
 Windows key + Tab 	Open Task View.
 Windows key + Ctrl + D 	Create a virtual desktop.
 Windows key + Ctrl + F4 	Close active virtual desktop.
 Windows key + Ctrl + Right arrow 	Switch to the virtual desktop on the right.
 Windows key + Ctrl + Left arrow 	Switch to the virtual desktop on the left.
-
 Ctrl + Shift + Esc 	Open Task Manager.
 Ctrl + Alt + Tab 	View open apps.
 
@@ -153,38 +141,8 @@ Ctrl + Alt + Tab 	View open apps.
 - "\": Open the Windows 10 drive.
 - ".": Open the Home folder of the current user.
 - "..": Open the Users folder.
-- "appwiz.cpl": Open Programs and Features.
-- "compmgmt.msc": The Computer Management app.
-- "control": Open Control Panel.
-- "dcomcnfg": Component Services.
-- "devmgmt.msc": Windows Device Manager.
-- "eventvwr.msc": Windows Event Viewer.
-- "firewall.cpl": Windows Firewall.
-- "gpedit.msc": Group Policy Editor in Windows.
-- "resmon": Open Resource Monitor.
-- "lusrmgr.msc": Local Users and Groups Manager.
-- "main.cpl": Adjust your mouse settings.
-- "mrt": Malicious software removal tool.
-- "msconfig": Open System Configuration.
-- "msinfo32": Access System Information.
-- "mstsc": Open Remote Desktop.
-- "ncpa.cpl": Access all your Network Adapters.
-- "netplwiz": Advanced User Accounts window.
-- "regedit": Registry Editor.
-- "perfmon.msc": Performance monitor.
-- "powercfg.cpl": Power Options.
-- "services.msc": Open services window.
-- "shell:startup": Open startup folder.
-- "shell:RecycleBinFolder": Open RecycleBin.
-- "sysdm.cp": System Properties window.
-- "timedate.cpl": Date and Time Properties Properties.
 
 # References
-- https://www.thetopsites.net/article/54098567.shtml
-- https://miloserdov.org/?p=1839
 - https://github.com/git-for-windows/git/wiki/Symbolic-Links#allowing-non-administrators-to-create-symbolic-links
-- https://superuser.com/questions/327401/is-there-a-windows-command-line-with-smart-bash-like-autocompletions-command-h/327422
-- https://ss64.com/ps/syntax-env.html
-- https://medium.com/@vhanla/agnoster-like-theme-for-powershell-95d257ba9ba8
 - https://www.windowscentral.com/best-windows-10-keyboard-shortcuts
 - https://www.maketecheasier.com/20-run-commands-windows/

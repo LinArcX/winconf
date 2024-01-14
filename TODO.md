@@ -42,6 +42,9 @@
   Whether this could interfere with running batch files somehow, I don’t know. You’ll have to try. Fortunately, the change is easily reversible.
   Source: https://superuser.com/questions/1723381/hide-all-rights-reserved-message-in-cmd-in-terminal
 
+- [] configure ~/.gitconfig
+- [] create functions/aliases for cmd.
+- [] set keybinding to close current window.
 - [] make lite-xl as default editor
 - [] Set default apps and extensions like mimeapps in linux via powershell.
 - [] Alt-F4 not working to close windows.(use alt+q instead!)
@@ -52,5 +55,6 @@
 - [] Set Environtment variables from powershell.
 - [] Environtment variables not seen after setting.(You should poweroff computer to see it.)
 - [] Use torify
-- [] Sort choco package by latest install date
 - [] Set keybinding to open regedit, window
+
+- [Canceled] Sort choco package by latest install date

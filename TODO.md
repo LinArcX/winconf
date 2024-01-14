@@ -1,7 +1,15 @@
+- [] Use torify
+- [] Bind Ctrl+a, BackSpace to Ctrl+k.
+- [] Manage tor via services(aliases)
+- [] Environtment variables not seen after setting.(You should poweroff computer to see it.)
+- [Done] configure ~/.gitconfig
+- [Done] Disable Ctrl+alt+arrow keys.
+- [Done] make lite-xl as default editor
+- [Done] set keybinding to close current window.
+  - Alt + F4 is enough.
 - [Done] disable win key:
   Run gpedit.msc and go to: UserConfiguration > Administrative Templates > Windows Components > File Explorer
   And "Enable" this item: "Turn off windows Key hotkeys"
-
 - [Done] How to Export/Import env?
   Export:
   `SET >> allvariables.txt`
@@ -32,7 +40,7 @@
 - [Done] Some pinned items like network locations won't delete from QuickAccess. How remove theme?
   Just put another quickaccess link in QuickAcces folder. Select both of them and unpin them.
 
-- [Done] Hide "All rights reserved" message in CMD
+- [Done] Hide "All rights reserved" message in CMD:
   This is sort-of possible, but there may be consequences. cmd.exe looks at two registry values (type REG_SZ or REG_EXPAND_SZ) when starting up:
 
   `HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun`
@@ -41,20 +49,7 @@
   
   Whether this could interfere with running batch files somehow, I don’t know. You’ll have to try. Fortunately, the change is easily reversible.
   Source: https://superuser.com/questions/1723381/hide-all-rights-reserved-message-in-cmd-in-terminal
-
-- [] configure ~/.gitconfig
-- [] create functions/aliases for cmd.
-- [] set keybinding to close current window.
-- [] make lite-xl as default editor
-- [] Set default apps and extensions like mimeapps in linux via powershell.
-- [] Alt-F4 not working to close windows.(use alt+q instead!)
-- [] Disable Ctrl+alt+arrow keys.
-- [] Bind Ctrl+a, BackSpace to Ctrl+k.
-- [] Set startup apps here: `C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` via powershell.
-- [] Manage tor via services(aliases)
-- [] Set Environtment variables from powershell.
-- [] Environtment variables not seen after setting.(You should poweroff computer to see it.)
-- [] Use torify
-- [] Set keybinding to open regedit, window
-
+- [?] Set keybinding to open regedit window.
+- [?] Alt-F4 not working to close windows.(use alt+q instead!)
+- [?] Set default apps and extensions like mimeapps in linux via powershell.
 - [Canceled] Sort choco package by latest install date

@@ -1,0 +1,62 @@
+[core]
+  pager = delta
+	symlinks = true
+  #editor = nvim
+  #gitproxy = /home/linarcx/bin/git-proxy-wrapper
+
+[credential]
+	helper = manager
+
+[user]
+	name = linarcx
+	email = linarcx@gmail.com
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  line-numbers = true
+  features = decorations
+  #features = collared-trogon
+  #side-by-side = true
+
+[diff]
+  tool = nvimdiff
+  colorMoved = default
+
+[pager]
+	branch = true
+  diff = true
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+
+[merge]
+  conflictstyle = diff3
+
+[alias]
+	lg = log --color --graph --pretty
+
+[delta "decorations"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-style = file
+  #hunk-header-line-number-style = "#067a00"
+
+# log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+#[http]
+#	proxy = http://localhost:9080
+
+#[socks5]
+#	proxy = socks5h://localhost:1080
+
+#[http "https://gitlab.com"]
+#	proxy = https://localhost:8123
+
+#[http "https://github.com"]
+#	proxy = https://localhost:8123
+
+#[http]
+#	proxy = socks://127.0.0.1:1080

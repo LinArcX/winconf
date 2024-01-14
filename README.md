@@ -76,7 +76,7 @@ I tend to follow these ideas as much as i can:
 - Create HardLinks:
   - `New-Item -itemtype HardLink -path $env:LOCALAPPDATA\nvim\ -name plugins.vim -value C:\winny\.config\.nvim\plugins.vim`
 
-Tip: To manage your dot-files, always use __SymbolicLink_.
+Tip: To manage your dot-files, always use __SymbolicLink__.
 
 ## Other
 - Clears the command history:
@@ -87,7 +87,7 @@ Tip: To manage your dot-files, always use __SymbolicLink_.
   `Ctrl + End`
 - Move left or right one word at a time:
   `Ctrl + Left Arrow || Ctrl + Right Arrow`
-- Pause||resume the display of output:
+- Pause/resume the display of output:
   `Ctrl + S`
 - Clear the current line:
   `Esc`

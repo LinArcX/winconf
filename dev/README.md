@@ -1,58 +1,61 @@
 # Development
-## Setup git
-First install openssh with scoop.
+- git
+- neovim 
+- openssh
+- fd 
+- grep 
+- llvm 
+- scc
+- ripgrep
+- ugrep 
+- zeal
+- doxygen
+- cppcheck 
+- cscope
+- delta
+- diffutils 
+- gdb 
+- dependencies
+- regdllview
+- drmemory
+- OpenCppCoverage
+- FlawFinder: https://dwheeler.com/flawfinder/
+- VCG: https://github.com/nccgroup/VCG
+- ApiMonitor: http://www.rohitab.com/apimonitor
+- WinSpy: https://github.com/strobejb/winspy
+- EdoC++: https://edoc.sourceforge.net/index.html
+- procexp: https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
+- procmon: https://learn.microsoft.com/en-us/sysinternals/downloads/procmon
+- windbg: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/
+  - Other usefull tools included: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/extra-tools
+- windows ADK: https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install
+- WDK(Windows Driver Kit): https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
+- Build Tools for Visual Studio 2022(https://visualstudio.microsoft.com/downloads/)
+  
+  It will install these software on your machine:
+  - Windows Software Development Kit
+  - Microsoft Visual C++ 2015-2022 Redistributable
+  - Microsoft Visual Studio Installer
 
-Then generate a rsa key:
-`ssh-keygen -t rsa -b 2048 -C "email@example.com"`
+  And through Developer Command prompt for Visual Studio 2022, you can access to:
+  - cl.exe
+  - dumpbin
+
+## Important directories of Visual Studio Build Tools
+- packages directory: `C:\ProgramData\Microsoft\VisualStudio\Packages`
+- shared components, tools, sdk: `C:\Program Files (x86)\Microsoft Visual Studio\Shared`
+- build tools: `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
+
+## Generate ssh keys
+- generate a rsa key:
+  `ssh-keygen -t rsa -b 2048 -C "email@example.com"`
 
 It'll create two files: __id_rsa__ and __id_rsa.pub__.
 Open __id_rsa.pub__ and copy it's content into your git account in ssh part.
 
-https://docs.gitlab.com/ee/ssh/
-
-## C/C++ Development without VisualStudio
-First install these base packages via chocolatey:
-
-```
-visualstudio-installer
-visualstudio2019community
-visualstudio2019buildtools
-visualstudio2019-workload-vctools
-```
-
-Above packages will install these indiviaul components on your machine:
-- C++ 2019 Redistributable update
-- C++ CMake tools for windows
-- MSVC v142 - VS 2019 C++ x86/64 build tools(v14.27)
-- C++ AddressSanitizer
-- Testing tools core features - Build Tools
-- C++ Build Tools core features
-- Windows 10 SDK(10.0.18362.0)
-- Windows Universal C Runtime
-Tip: You can check them in indivual components tab in visual-studio-installer.
-
-For Command-line development:
-`windows-sdk-10.1`
-
-Above package will install these indivisual components on your machine:
-- .NET Framework 4.6.1 targeting pack
-- .NET Framework 4.8 SDK
-
-For Native-Desktop development:
-`visualstudio2019-workload-nativedesktop`
-
-Packages directory:
-`C:\ProgramData\Microsoft\VisualStudio\Packages`
-
-Shared components, tools, sdk:
-`C:\Program Files (x86)\Microsoft Visual Studio\Shared`
-
-Build Tools:
-`C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
-
 ## Resources
-https://stackoverflow.com/questions/41914013/how-can-i-make-a-win32-app-with-no-dependency-on-the-msvc-dll
+https://github.com/flutter/flutter/issues/77638
 https://devtalk.blender.org/t/error-after-debug-vsdevcmd-bat-calling-ext/25990
 https://www.reddit.com/r/cpp_questions/comments/xydqmj/can_i_work_on_a_desktop_application_using_the/
 https://copyprogramming.com/howto/compiling-a-win32-gui-app-without-a-console-using-mingw-and-eclipse
-https://github.com/flutter/flutter/issues/77638
+https://stackoverflow.com/questions/41914013/how-can-i-make-a-win32-app-with-no-dependency-on-the-msvc-dll

@@ -11,12 +11,12 @@ I tend to follow these ideas as much as i can:
 - cmd
 - wmenu [https://github.com/LinArcX/wmenu]
 - scoop
-  7zip arc unar winrar zip unzip xz zstd
-  gsudo alacritty lf fzf lite-xl okular speedcrunch anki cwrsync bottom(btm)
+  7zip arc unar winrar zip unzip xz zstd tar
+  gsudo alacritty lf fzf lite-xl okular speedcrunch anki cwrsync bottom(btm) qemu
   mpv nomacs ffmpeg mediainfo mpg123 flameshot
   brave qbittorrent uget youtube-dl curl dog
   clavier-plus clink clink-completions clink-flex-prompt uutils-coreutils
-  git fd grep bat llvm neovim dependencies openssh regdllview scc ripgrep ugrep jq tar zeal doxygen dos2unix cppcheck cscope delta diffutils gdb drmemory
+  git fd grep bat llvm neovim dependencies openssh regdllview scc ripgrep ugrep jq zeal doxygen dos2unix cppcheck cscope delta diffutils gdb drmemory
 
 ## Optional
 - broot
@@ -26,9 +26,6 @@ I tend to follow these ideas as much as i can:
 - wezterm [https://wezfurlong.org/wezterm/] - replacement of tmux
 
 ## Packages that may not available
-- windbg
-- procexp64
-
 - amber
 - splint
 - ascii
@@ -124,6 +121,8 @@ Tip: To manage your dot-files, always use __SymbolicLink_.
   `Tab / Shift+Tab`
 
 # Shortcuts
+- Close current window:
+  `Alt + F4`
 - Open Settings app:
   `Windows key + I`
 - Open File Explorer:

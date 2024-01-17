@@ -7,7 +7,9 @@
   - FZF_COMPLETION_AUTO_COMMON_PREFIX: true
 
 # TODO
+- [Done] create aliases for cmd.
+- [] create functions for cmd.
+- [] in d.txt, we should use %USERPROFILE% and %APPLOCALDATA% and etc.. and d.bat should parse it correctly.
 - [] create menu of applications using fzf and batch scripts.
-- [] create functions/aliases for cmd.
 - [] create batch script to set/unsert environtment variables.
 - [] create batch script to put application in startup: `C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`.

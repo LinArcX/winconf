@@ -31,7 +31,7 @@
 - [Done] disable Ctrl+Alt+down and Ctrl+Alt+up:
   Right click on "Intel Hd Graphics" in system tray. Graphic opitons > HotKeys > Disable.
 
-- [Donw] How remove pinned items from QuickAccess?
+- [Done] How remove pinned items from QuickAccess?
   Just click on QuickAcces button in file explorer to open it. And then right click on every item that you want to unpin.
 
 - [Done] How to Change Win + E Shortcut Target in Windows 10/11?

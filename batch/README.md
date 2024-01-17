@@ -1,5 +1,5 @@
 # First Steps
-- add fzf path of current directory to your environment variables.
+- add __fzf__ and __wmenu__ in this directory to your environment variables.
 - also add these env:
   - FZF_DEFAULT_OPTS : --layout=reverse --border --cycle
   - FZF_DEFAULT_COMMAND: rg --files --no-ignore --hidden --follow --glob "!.git/*"

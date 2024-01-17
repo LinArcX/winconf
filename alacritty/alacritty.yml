@@ -456,7 +456,7 @@ font:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
 shell:
-  program: cmd /K aliases.bat
+  program: cmd /K D:\workspace\other\winconf\batch\wmenu\aliases.bat
 #  args:
 #    - --login
 

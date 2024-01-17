@@ -13,4 +13,10 @@ if "%cmdcmdline:~0,6%" == "cmd /c" goto :end
   endlocal
 EXIT /B 0
 
+:: :CDE
+::   setlocal EnableDelayedExpansion
+::     cd E:
+::   endlocal
+:: EXIT /B 0
+
 :end

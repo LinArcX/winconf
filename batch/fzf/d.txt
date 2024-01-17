@@ -1,6 +1,21 @@
 C:\
+C:\Users\saeed\
+D:\workspace\other\winconf
+D:\workspace\assembly\pardis
+D:\workspace\c\01_active\kaveh\
+D:\workspace\c++\02_maintainance\wmenu
 D:\
+D:\video
+D:\books\02_languages
+D:\books\01_computer\programming
 E:\
-%USERPROFILE% 
-%APPDATA%
-kaveh
+E:\video
+C:\Users\saeed\.ssh
+C:\Users\saeed\Downloads 
+C:\Users\saeed\AppData\Local\
+C:\Users\saeed\AppData\Roaming
+C:\Users\saeed\AppData\Local\Temp
+C:\Users\saeed\AppData\Local\nvim
+C:\Users\saeed\AppData\Local\lf
+C:\Users\saeed\AppData\Local\mpv
+C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup

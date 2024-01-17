@@ -1,13 +1,12 @@
 @echo off
-setlocal EnableDelayedExpansion
 
-rem Use type command to read the content of apps.txt and pipe it to fzf
-for /f "delims=" %%a in ('type D:\workspace\other\winconf\batch\fzf\d.txt ^| fzf --header="directories:"' ) do ( set "selected=%%a" )
+set "selected=%TEMP%dtemp.txt"
+type D:\workspace\other\winconf\batch\fzf\d.txt | fzf > %selected%
 
-if "!selected!"=="C:\" ( cd /d C:\ )
-if "!selected!"=="D:\" ( cd /d C:\ )
-if "!selected!"=="E:\" ( cd /d C:\ )
-if "!selected!"=="%USERPROFILE%" ( cd /d %USERPROFILE%  )
-if "!selected!"=="%APPDATA%" ( cd /d %APPDATA% )
-if "!selected!"=="kaveh" ( cd /d D:\workspace\c\01_active\kaveh\ )
-endlocal
+REM Read the content of tmp.txt
+for /f "usebackq delims=" %%a in ("%selected%") do ( set "directory=%%a" )
+
+REM Switch to the specified directory
+cd /d "%directory%"
+
+REM for /f "delims=" %%i in (d.txt) do cd %%i

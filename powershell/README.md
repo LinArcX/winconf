@@ -42,6 +42,13 @@ You can open it like this: `nvim $profile`
 ## Move file to a directory
 `Move-Item -Path <source-file> -Destination <dest-directory>`
 
+## Search for a package
+  Get-AppxPackage -allusers *windowsstore*
+
+## Bring back the removed software
+  Get-AppxPackage -allusers *windowsstore* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+
 ## Refrences
 - https://ss64.com/ps/syntax-env.html
 - https://medium.com/@vhanla/agnoster-like-theme-for-powershell-95d257ba9ba8
+- https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/

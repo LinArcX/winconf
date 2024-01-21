@@ -1,3 +1,4 @@
+- [] Can't open files in LF.
 - [] Use torify
 - [] Bind Ctrl+a, BackSpace to Ctrl+k.
 - [] Manage tor via services(aliases)

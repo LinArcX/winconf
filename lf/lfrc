@@ -1,0 +1,336 @@
+# [TODO]: open-with for unknown files.
+# [TODO]: keybinding in dwm to open lf in same directory
+
+set shell cmd
+
+set hidden
+#set filesep " "
+set info size
+set dircounts
+set icons
+#set drawbox
+#set ifs "\n"
+
+# movement
+map gr  cd /
+map ge  cd /etc
+map gu  cd /usr
+
+map gh  cd ~
+#map gt  cd ~/.trash
+map gc  cd ~/.config
+map gl  cd ~/.local
+map gls cd ~/.local/share
+map gd  cd ~/desktop
+map gdw cd ~/downloads
+
+map gD  cd D:
+map gb  cd D:\books
+map gv  cd D:\video
+map gs  cd D:\software
+map gbc cd D:\books\computer
+map gw  cd D:\workspace
+map gbg cd D:\workspace\other\blogit
+map gp  cd D:\workspace\c\projects
+map gx cd  D:\workspace\c++\projects
+
+map gE  cd E:\
+map gy  cd E:\video
+map gm  cd E:\music
+map gi  cd E:\images
+
+## unmap keys for future uses
+# Reserverd keys: hjkl, gg, G, <space>, v(invert), u(unmark), y(yank), d(delete), p(paste), c(clear), <home>, <end>
+# <pgup>, <pgdn>, <c-b>, <c-f>, <c-u>, <c-d>, <up>, <down>
+map r
+map f
+map m
+map i
+map p
+map o
+
+map I $less %f%
+
+map x $$f
+map X !$f
+#map o &mimeopen $f
+#map O $mimeopen --ask $f
+
+
+#map r push :rename<space>
+
+
+## general mappings
+map ; read
+map . set hidden!
+map o open
+map <enter> $nvim %f%
+
+cmd open &{{
+  &notepad.exe
+  #$nvim %f%
+  #notepad.exe 
+  #nvim $f
+  #echo "hi: "
+  #case $(file --mime-type "$(readlink -f $f)" -b) in
+	#  application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
+	#  image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
+  #  text/*|application/json|inode/x-empty) nvim $fx;;
+  #  text/plain) nvim $fx;;
+	#  image/x-xcf) setsid -f feh $f >/dev/null 2>&1 ;;
+	#  image/svg+xml) display -- $f ;;
+	#  image/*) feh $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
+	#  	setsid -f sxiv -aio 2>/dev/null | while read -r file; do
+	#  		[ -z "$file" ] && continue
+	#  		lf -remote "send select \"$file\""
+	#  		lf -remote "send toggle"
+	#  	done &
+	#  	;;
+	#  audio/*) mpv --audio-display=no $f ;;
+	#  video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+	#  application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	#  application/pgp-encrypted) nvim $fx ;;
+  #  *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+  #esac
+}}
+
+
+
+
+#cmd saeed ${{
+#  call notepad.exe
+#}}
+#cmd saeed ${{
+#  &notepad.exe
+#}}
+
+#cmd saeed sh -c 'nvim %f%'
+
+map <delete> trash
+map DD delete
+map ? $lf -doc | less
+
+## archive mappings
+map az zip
+map at tar
+map ag targz
+map ab targz
+map au extract
+
+## rename mappings
+map rb bulk_rename            # after extension
+map rf push rr<c-a>           # at the beginnig
+map rr rename
+map rx push rr<a-b>           # end of file name
+map rw push rr<a-b><a-b><a-f> # first of extension
+
+## paste types
+map pp paste
+map pa async_paste
+
+## file/dir mappings
+map ff push %touch<space>
+map fd push %mkdir<space>
+map fc create_directory_contains_selected_items
+map fs create_file_sudo
+
+## open special files in nvim
+map ob open_bashrc
+map oc open_lfrc
+map om open_mimeapps
+
+## miscellaneous
+map mc set dircounts!
+map md set dironly!
+map mr reload
+map ms calcdirsize # should first disable dircounts and then call this command.
+map myd yank-dirname
+map myp yank-path
+map myb yank-basename
+map myw yank-basename-without-extension
+
+cmd yank-dirname $dirname -- "$f" | head -c-1 | xclip -i -selection clipboard
+cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
+cmd yank-basename $basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
+cmd yank-basename-without-extension &basename -a -- $fx | rev | cut -d. -f2- | rev | head -c-1 | xclip -i -selection clipboard
+
+## commands
+cmd trash ${{
+  #clear
+  #set -f;
+  nircmd.exe moverecyclebin $f
+  #mkdir -p ~/.trash
+  #mv $fx ~/.trash
+}}
+
+cmd delete ${{
+  #clear
+  #set -f
+  printf "$fx\n"
+  printf "delete?[y/n]"
+  read ans
+  [ $ans = "y" ] && rm -rf $fx
+}}
+
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+cmd unarchive ${{
+  clear
+  case "$f" in
+    *.zip) unzip "$f" ;;
+    *.tar.gz) tar -xzvf "$f" ;;
+    *.tar.bz2) tar -xjvf "$f" ;;
+    *.tar) tar -xvf "$f" ;;
+    *.7z) 7z x "$f" ;;
+    *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd open_lfrc ${{
+  clear
+  nvim ~/.config/lf/lfrc
+}}
+
+cmd open_mimeapps ${{
+  clear
+  nvim ~/.config/mimeapps.list
+}}
+
+cmd open_bashrc ${{
+  clear
+  nvim ~/.bashrc
+}}
+
+cmd create_directory ${{
+  clear
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd create_file ${{
+  clear
+  printf "File Name: "
+  read ans
+  nvim $ans
+}}
+
+cmd create_file_sudo ${{
+  clear
+  printf "File Name: "
+  read ans
+  sudo nvim $ans
+}}
+
+cmd create_directory_contains_selected_items ${{
+  set -f
+  read newd
+  printf "Directory name: "
+  mkdir -- "$newd"
+  mv -- $fx "$newd"
+}}
+
+cmd async_paste &{{
+  set -- $(command cat ~/.local/share/lf/files)
+  mode="$1"
+  shift
+  case "$mode" in
+      copy) cp -rn -- "$@" .;;
+      move) mv -n -- "$@" .;;
+  esac
+  rm ~/.local/share/lf/files
+  lf -remote "send clear"
+}}
+
+cmd bulk_rename ${{
+  cdir="$(pwd)"
+    printf "%s\n" "$(printf "$fx\n" | awk -F'/' '{print $NF}')" > /tmp/lfbulk.tmp
+    cp /tmp/lfbulk.tmp /tmp/lfbulk2.tmp
+    nvim /tmp/lfbulk2.tmp
+
+    i=1
+    while [ "$i" -le $(cat /tmp/lfbulk.tmp | wc -l) ]; do
+      fi="$(cat /tmp/lfbulk.tmp | head -n $i | tail -n 1)"
+      fo="$(cat /tmp/lfbulk2.tmp | head -n $i | tail -n 1)"
+      mv $cdir/$fi $cdir/$fo --force
+      i=$(( i + 1 ))
+    done
+}}
+
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+#cmd open ${{
+#  test -L $f && f=$(readlink -f $f)
+#  case $(file --mime-type $f -b) in
+#      text/*) nvim $fx;;
+#      *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
+#  esac
+#}}
+
+#cmd open ${{
+#    case $(file --mime-type $f -b) in
+#        text/*\
+#            | application/json\
+#            | application/pgp-encrypted)
+#                nvim "$f";;
+#	    image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+#	    image/svg+xml) display -- "$f" ;;
+#	    image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
+#	    image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" | setsid -f sxiv -aio 2>/dev/null | lf-select & ;;
+#	    audio/*)
+#            mpv --audio-display=no "$f" >/dev/null 2>&1 &;;
+#        video/*)
+#            mpv "$f" -quiet >/dev/null 2>&1 &;;
+#        #video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+#	    application/pdf\
+#            |application/vnd*\
+#            |application/epub*)
+#                #setsid -f zathura $fx >/dev/null 2>&1 ;;
+#            zathura "$f" >/dev/null 2>&1 & ;;
+#        *)
+#            for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+##    case $(file --mime-type "$f" -bL) in
+##        *) xdg-open "$f" ;;
+##    esac
+#    esac
+#}}
+#
+##cmd tar ${{
+#    set -f
+#    mkdir $1
+#    cp -r $fx $1
+#    tar czf $1.tar.gz $1
+#    rm -rf $1
+#}}
+#
+#cmd zip ${{
+#    set -f
+#    mkdir $1
+#    cp -r $fx $1
+#    zip -r $1.zip $1
+#    rm -rf $1
+#}}

@@ -1,8 +1,10 @@
 C:\
 C:\Users\saeed\
+C:\Users\saeed\AppData\Roaming\yazi\config
 C:\Users\saeed\Desktop
 D:\workspace\other\winconf
 D:\workspace\assembly\pardis
+D:\workspace\c\01_active\zaal
 D:\workspace\c\01_active\kaveh\
 D:\workspace\c++\02_maintainance\wmenu
 D:\

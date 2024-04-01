@@ -1,0 +1,140 @@
+                  ###################################
+                  #   Configuration file for Lira   #
+                  #     CliFM's resource opener     #
+                  ###################################
+
+# Commented and blank lines are omitted.
+
+# The below settings cover the most common filetypes.
+# It is recommended to edit this file placing your prefered applications
+# at the beginning of the apps list to speed up the opening process.
+
+# The file is read top to bottom and left to right; the first existent
+# application found will be used.
+
+# Applications defined here are NOT desktop files, but commands (arguments
+# can be used as well). Bear in mind that these commands will be executed
+# directly without shell intervention, so that no shell goodies (like pipes,
+# conditions, loops, etc) are available. In case you need something more
+# complex than a single command (including shell capabilities) write your
+# own script and place the path to the script in place of the command.
+# For example: X:^text/.*:~/scripts/my_cool_script.sh
+
+# Use 'X' to specify a GUI environment and '!X' for non-GUI environments,
+# like the kernel built-in console or a remote SSH session.
+
+# Use 'N' to match file names instead of MIME types.
+
+# Regular expressions are allowed for both file types and file names.
+
+# Use the %f placeholder to specify the position of the file name to be
+# opened in the command. Example:
+# 'mpv %f --terminal=no' -> 'mpv FILE --terminal=no'
+# If %f is not specified, the file name will be appended to the end of the
+# command. Ex: 'mpv --terminal=no' -> 'mpv --terminal=no FILE'
+
+# To silence STDERR and/or STDOUT use !E and !O respectively (they can
+# be used together). Examples:
+# Silence STDERR only and run in the foreground:
+#    mpv %f !E
+# Silence both (STDERR and STDOUT) and run in the background:
+#    mpv %f !EO &
+# or
+#    mpv %f !E !O &
+# For Ranger users, "!EO" is equivalent to "flag f" in rifle.conf
+
+# The '%x' flag can be used as a shorthand for "%f !EO &". Example:
+#    mpv %x
+
+# Running the opening application in the background:
+# For GUI applications:
+#    APP %x
+# For terminal applications:
+#    TERM -e APP %x
+# Replace 'TERM' and 'APP' by the corresponding values. The -e option
+# might vary depending on the terminal emulator used (TERM).
+
+# Note on graphical applications: If the opening application is already running
+# the file might be opened in a tab, and CliFM won't wait for the file to be
+# closed (because the process already returned). To avoid this, instruct the
+# application to run a new instance: Ex: geany -i, gedit -s, kate -n,
+# pluma --new-window, and so on.
+
+# Environment variables can be used as well. Example:
+# X:text/plain=$EDITOR %f &;$VISUAL;nano;vi
+
+# Use Ranger's rifle (or whatever opener you prefer) to open all files
+#.*=rifle
+
+###########################
+#  File names/extensions  #
+###########################
+
+# Match a full file name
+#X:N:some_filename=cmd
+
+# Match all file names starting with 'str'
+#X:N:^str.*=cmd
+
+# Match files with extension 'ext'
+#X:N:.*\.ext$=cmd
+
+X:N:.*\.djvu$=djview %x;zathura %x;xreader %x;evince %x;atril %x
+X:N:.*\.epub$=mupdf;zathura %x;xreader %x;ebook-viewer %x;FBReader %x;foliate %x
+X:N:.*\.mobi$=mupdf;ebook-viewer %x;FBReader %x;foliate %x
+X:N:.*\.(cbr|cbz)$=mcomix %x;xreader %x;YACReader %x;qcomicbook %x;zathura %x;foliate %x
+X:N:(.*\.clifm$|clifmrc)=$EDITOR;$VISUAL;kak;micro;nvim;vim;vi;mg;emacs;nano;mili;leafpad;mousepad;featherpad;gedit;kate;pluma
+!X:N:(.*\.clifm$|clifmrc)=$EDITOR;$VISUAL;kak;micro;nvim;vim;vi;mg;emacs;nano
+
+
+##################
+#   MIME types   #
+##################
+
+# Directories - only for the open-with (ow) command and the --open command
+# line switch
+# In graphical environments directories will be opened in a new window
+X:inode/directory=xterm -e clifm %x;xterm -e vifm %x;pcmanfm %x;thunar %x;xterm -e ncdu %x
+!X:inode/directory=vifm;ranger;nnn;ncdu
+
+# Web content
+X:^text/html$=$BROWSER;surf %x;vimprobable %x;vimprobable2 %x;qutebrowser %x;dwb %x;jumanji %x;luakit %x;uzbl %x;uzbl-tabbed %x;uzbl-browser %x;uzbl-core %x;iceweasel %x;midori %x;opera %x;firefox %x;seamonkey %x;brave %x;chromium-browser %x;chromium %x;google-chrome %x;epiphany %x;konqueror %x;elinks;links2;links;lynx;w3m
+!X:^text/html$=$BROWSER;elinks;links2;links;lynx;w3m
+
+# Text
+X:^text/rtf$=libreoffice %x;soffice %x;ooffice %x
+X:(^text/.*|application/json|inode/x-empty)=$EDITOR;$VISUAL;kak;micro;dte;nvim;vim;vi;mg;emacs;nano;mili;leafpad %x;mousepad %x;featherpad %x;nedit %x;kate %x;gedit %x;pluma %x;io.elementary.code %x;liri-text %x;xed %x;atom %x;nota %x;gobby %x;kwrite %x;xedit %x
+!X:(^text/.*|application/json|inode/x-empty)=$EDITOR;$VISUAL;kak;micro;dte;nvim;vim;vi;mg;emacs;nano
+
+# Office documents
+^application/.*(open|office)document\.spreadsheet.*=sc-im
+X:^application/(msword|vnd.ms-excel|vnd.ms-powerpoint|.*(open|office)document.*)=libreoffice %x;soffice %x;ooffice %x
+
+# Archives
+# Note: 'ad' is CliFM's built-in archives utility (based on atool). Remove it if you
+# prefer another application.
+X:^application/(zip|gzip|zstd|x-7z-compressed|x-xz|x-bzip*|x-tar|x-iso9660-image)=ad;xarchiver %x;lxqt-archiver %x;ark %x
+!X:^application/(zip|gzip|zstd|x-7z-compressed|x-xz|x-bzip*|x-tar|x-iso9660-image)=ad
+
+# PDF
+X:.*/pdf$=mupdf %x;sioyek %x;llpp %x;lpdf %x;zathura %x;mupdf-x11 %x;apvlv %x;xpdf %x;xreader %x;evince %x;atril %x;okular %x;epdfview %x;qpdfview %x
+
+# Images
+X:^image/gif$=animate %x;pqiv %x;sxiv -a %x;nsxiv -a %x;feh %x
+X:^image/svg=display;inkscape %x
+X:^image/.*=sxiv %x;nsxiv %x;pqiv %x;gpicview %x;qview %x;qimgv %x;mirage %x;ristretto %x;eog %x;eom %x;xviewer %x;viewnior %x;nomacs %x;geeqie %x;gwenview %x;gthumb %x;gimp %x
+!X:^image/.*=fim;img2txt;cacaview;fbi;fbv
+
+# Video and audio
+X:^video/.*=ffplay %x;mplayer %x;mplayer2 %x;mpv %x;vlc %x;gmplayer %x;smplayer %x;celluloid %x;qmplayer2 %x;haruna %x;totem %x
+X:^audio/.*=mpv %x;gmplayer %x;smplayer %x;vlc %x;totem %x;ffplay %x;mplayer;mplayer2
+!X:^audio/.*=ffplay -nodisp -autoexit %f !EO;mplayer %f !EO;mpv --no-terminal
+
+# Fonts
+X:^font/.*=fontforge;fontpreview
+
+# Torrent:
+X:application/x-bittorrent=rtorrent;transimission-gtk %x;transmission-qt %x;deluge-gtk %x;ktorrent %x
+
+# Fallback to an external opener as last resource
+.*=handlr open;mimeopen -n;rifle;mimeo;xdg-open;open;

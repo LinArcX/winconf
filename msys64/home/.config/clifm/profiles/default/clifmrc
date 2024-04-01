@@ -1,0 +1,315 @@
+		###########################################
+		#                  CLIFM                  #
+		#      The command line file manager      #
+		###########################################
+
+# This is the configuration file for CliFM
+
+# Lines starting with '#' or ';' are commented (ignored)
+# Uncomment an option to override the default value
+
+# Set the color scheme
+;ColorScheme=default
+
+# Inform amount of files contained by a directories when listing files
+;FilesCounter=true
+
+# How to list files: 0 = vertically (like ls(1) would), 1 = horizontally
+;ListingMode=0
+
+# List files automatically after changing the current directory.
+;AutoLs=true
+
+# Send errors, warnings, and notices to the notification daemon.
+;DesktopNotifications=false
+
+# Print a map of the current position in the directory
+# history list, showing previous, current, and next entries.
+;DirhistMap=false
+
+# Use a regex expression to filter file names when listing files.
+# Run 'help file-filters' for more information.
+;Filter=
+
+# Set the default copy command. Available options are:
+# 0 = 'cp -iRp', 1 = 'cp -Rp', 2 = 'advcp -giRp', 3 = 'advcp -gRp',
+# 4 = 'wcp', and 5 = 'rsync -avP'
+# 2-5 include a progress bar
+# Only 0 and 2 will prompt before overwrite
+;cpCmd=0
+
+# Set the default move command. Available options are:
+# 0 = 'mv -i', 1 = 'mv', 2 = 'advmv -gi', and 3 = 'advmv -g'
+# 2 and 3 include a progress bar
+# Only 0 and 2 will prompt before overwrite
+;mvCmd=0
+
+# If set to true, the 'r' command will never prompt before removals
+# rm(1) is invoked with the -f flag.
+;rmForce=false
+
+# Enable fuzzy matching for filename/path completions and suggestions
+;FuzzyMatching=false
+
+# Fuzzy matching algorithm: 1 (faster, non-Unicode), 2 (slower, Unicode)
+;FuzzyAlgorithm=2
+
+# TAB completion mode: 'standard', 'fzf', 'fnf', or 'smenu'. Defaults to
+# 'fzf' if the binary is found in PATH. Otherwise, the standard mode is used.
+;TabCompletionMode=
+
+# File previews for TAB completion (fzf mode only). Possible values:
+# 'true', 'false', 'hidden' (enabled, but hidden; toggle it with Alt-p)
+;FzfPreview=true
+
+# MaxPath is only used for the /p option of the prompt: the current working
+# directory will be abbreviated to its basename (everything after last slash)
+# whenever the current path is longer than MaxPath.
+;MaxPath=40
+
+WelcomeMessage=false
+WelcomeMessageStr=""
+
+# Print clifm's logo screen at startup
+SplashScreen=false
+
+ShowHiddenFiles=false
+
+# Display extended file metadata next to file names (long listing format)
+LongViewMode=true
+
+# Properties fields to be printed in long view mode
+# f = files counter for directories
+# B = file allocated blocks
+# d = inode number
+# l = number of hard links
+# p|n = permissions: either symbolic (p) or numeric/octal (n)
+# i|I = user/group IDs: as number (i) or name (I)
+# G = if i|I is set, don't print group
+# a|b|m|c = last (a)ccess, (b)irth, (m)odification, or status (c)hange time
+# s|S = size (either human readable (s) or bytes (S))
+# x = extended attributes/ACL/capabilities (marked as '@') (requires p|n)
+# A single dash ('-') disables all fields
+;PropFields="xfpIsm"
+# Number of spaces between fields in long view (1-2)
+;PropFieldsGap=1
+# Format used to print timestamps in long view. Available options:
+# default, relative, iso, long-iso, full-iso, +FORMAT (see strftime(3))
+;TimeStyle=""
+# Same as TimeStyle, but for the 'p/pp' command (relative time not supported)
+;PTimeStyle=""
+# Print files apparent size instead of actual device usage
+;ApparentSize=true
+# If running in long view, print directories total size
+;FullDirSize=false
+
+# Log errors and warnings
+;LogMsgs=false
+# Log commands entered in the command line
+;LogCmds=false
+
+# Minimum length at which a file name can be trimmed in long view mode.
+# If running in long mode, this setting overrides MaxFilenameLen whenever
+# this latter is smaller than MINFILENAMETRIM.
+;MinFilenameTrim=20
+
+# When a directory rank in the jump database is below MinJumpRank, it
+# is removed. If set to 0, directories are kept indefinitely.
+;MinJumpRank=10
+
+# When the sum of all ranks in the jump database reaches MaxJumpTotalRank,
+# all ranks will be reduced using a dynamic factor so that the total sum falls
+# below MaxJumpTotalRank again. Those entries falling below MinJumpRank will
+# be deleted.
+;MaxJumpTotalRank=100000
+
+# Automatically purge the jump database from non-existing directories.
+;PurgeJumpDB=false
+
+# Should CliFM be allowed to run external, shell commands?
+;ExternalCommands=true
+
+# Write the last visited directory to ~/.config/clifm/.last to be
+# later accessed by the corresponding shell function at program exit.
+# To enable this feature consult the manpage.
+;CdOnQuit=false
+
+# If set to true, a command name that is the name of a directory or a
+# file is executed as if it were the argument to the the 'cd' or the 
+# 'open' commands respectivelly: 'cd DIR' works the same as just 'DIR'
+# and 'open FILE' works the same as just 'FILE'.
+;Autocd=true
+;AutoOpen=true
+
+# Enable autocommand files (.cfm.in and .cfm.out)
+;ReadAutocmdFiles=false
+
+# Read .hidden files
+;ReadDotHidden=false
+
+# If set to true, enable auto-suggestions.
+;AutoSuggestions=true
+
+# The following checks will be performed in the order specified
+# by SuggestionStrategy. Available checks:
+# a = Aliases names
+# b = Bookmarks names (deprecated since v1.9.9)
+# c = Path completion
+# e = ELN's
+# f = File names in current directory
+# h = Commands history
+# j = Jump database
+# Use a dash (-) to skip a check. Ex: 'eahfj-c' to skip the bookmarks check
+;SuggestionStrategy=ehfj-ac
+
+# Suggest file names using the corresponding file type color
+# (set via the color scheme file).
+;SuggestFiletypeColor=false
+
+# Suggest a brief decription for internal commands
+;SuggestCmdDesc=true
+
+;SyntaxHighlighting=true
+
+# How to quote expanded ELN's (regular files only): backslash, single, double
+;QuotingStyle=backslash
+
+# We have three search strategies: 0 = glob-only, 1 = regex-only,
+# and 2 = glob-regex
+;SearchStrategy=2
+
+# In light mode, extra file type checks (except those provided by
+# the d_type field of the dirent structure (see readdir(3))
+# are disabled to speed up the listing process. Because of this, we cannot
+# know in advance if a file is readable by the current user, if it is executable,
+# SUID, SGID, if a symlink is broken, and so on. The file extension check is
+# ignored as well, so that the color per extension feature is disabled.
+;LightMode=false
+
+# If running with colors, append directory indicator
+# to directories. If running without colors (via the --no-color option),
+# append file type indicator at the end of file names.
+;Classify=true
+
+# Color links as target file name
+;ColorLinksAsTarget=false
+
+# Should the Selection Box be shared among different profiles?
+;ShareSelbox=false
+
+# Choose the resource opener to open files with their default associated
+# application. If not set, Lira, CliFM's built-in opener, is used.
+;Opener=
+
+# Only used when opening a directory via a new CliFM instance (with the 'x'
+# command), this option specifies the command to be used to launch a
+# terminal emulator to run CliFM on it.
+;TerminalCmd='xterm -e'
+
+# How to sort files: none, name, size, atime, btime, ctime, mtime,
+# version, extension, inode, owner, group, blocks, links
+;Sort=version
+# Sort in reverse order
+;SortReverse=false
+
+# If set to true, settings changed in the current workspace (only via
+# the command line or keyboard shortcuts) are kept private to that workspace
+# and made persistent (for the current session only), even when switching
+# workspaces.
+;PrivateWorkspaceSettings=false
+
+# A comma separated list of workspace names in the form NUM=NAME
+# Example: "1=MAIN,2=EXTRA,3=GIT,4=WORK" or "1=α,2=β,3=γ,4=δ"
+;WorkspaceNames=""
+
+# Print a usage tip at startup
+Tips=true
+
+;ListDirsFirst=true
+
+# Enable case sensitive listing for files in the current directory
+;CaseSensitiveList=false
+
+# Enable case sensitive lookup for the directory jumper function (via 
+# the 'j' command)
+;CaseSensitiveDirJump=false
+
+# Enable case sensitive completion for file names
+;CaseSensitivePathComp=false
+
+# Enable case sensitive search
+;CaseSensitiveSearch=false
+# Skip non-alphanumeric characters when sorting files ('version' or 'name')
+;SkipNonAlnumPrefix=true
+
+;Unicode=true
+
+# Mas, the files list pager. Possible values are:
+# 0/false: Disable the pager
+# 1/true: Run the pager whenever the list of files does not fit on the screen
+# >1: Run the pager whenever the amount of files in the current directory is
+# greater than or equal to this value (say, 1000)
+;Pager=false
+# How to list files in the pager: auto (default), short, long
+;PagerView=auto
+
+# Maximum file name length for listed files. If TrimNames is set to
+# true, names larger than MAXFILENAMELEN will be truncated at MAXFILENAMELEN
+# using a tilde.
+# Set it to -1 (or empty) to remove this limit.
+# When running in long mode, this setting is overriden by MinFilenameTrim
+# whenever MAXFILENAMELEN is smaller than MINFILENAMETRIM.
+;MaxFilenameLen=20
+
+# Trim file names longer than MAXFILENAMELEN
+;TrimNames=true
+
+;MaxHistory=1000
+;MaxDirhist=100
+;MaxLog=1000
+;HistIgnore=^[q,Q]$|^quit$|^exit$|^ .*|^#.*|^[0-9]+$|^\.+$
+;DirhistIgnore=""
+;Icons=false
+;Umask=077
+;DiskUsage=false
+
+# Print the list of selected files. You can limit the number of printed 
+# entries using the MaxPrintSelfiles option (-1 = no limit, 0 = auto (never
+# print more than half terminal height), or any custom value)
+;PrintSelfiles=false
+;MaxPrintSelfiles=0
+
+# If set to true, clear the screen before listing files
+;ClearScreen=true
+
+# If not specified, StartingPath defaults to the current working
+# directory. If set, it overrides RestoreLastPath
+;StartingPath=
+
+# If set to true, start CliFM in the last visited directory (and in the
+# last used workspace). This option is overriden by StartingPath (if set).
+;RestoreLastPath=true
+
+# If set to true, the 'r' command executes 'trash' instead of 'rm' to
+# prevent accidental deletions.
+;TrashAsRm=false
+
+# Set readline editing mode: 0 for vi and 1 for emacs (default).
+;RlEditMode=1
+
+# ALIASES
+#alias ls='ls --color=auto -A'
+
+# PROMPT COMMANDS
+# Write below the commands you want to be executed before the prompt. Ex:
+#promptcmd /usr/share/clifm/plugins/git_status.sh
+#promptcmd date | awk '{print $1", "$2,$3", "$4}'
+
+# AUTOCOMMANDS
+# Control CliFM settings on a per directory basis. For more information
+# consult the manpage
+#autocmd /media/remotes/** lm=1,fc=0
+#autocmd @ws3 lv=1
+#autocmd ~/important !printf "Keep your fingers outta here!\n" && read -n1
+#autocmd ~/Downloads !/usr/share/clifm/plugins/fzfnav.sh
+

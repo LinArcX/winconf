@@ -1,0 +1,42 @@
+######################
+# Actions file for clifm #
+######################
+
+# Define here your custom actions. Actions are custom command names
+# bound to an executable file located either in DATADIR/clifm/plugins
+# (usually /usr/local/share/clifm/plugins) or in $XDG_CONFIG_HOME/clifm/plugins (usually ~/.config/clifm/plugins).
+# Actions can be executed directly from clifm command line, as if they
+# were any other command, and the associated file will be executed
+# instead. All parameters passed to the action command will be passed
+# to the corresponding plugin as well.
+
++=finder.sh
+++=jumper.sh
+-=fzfnav.sh
+*=fzfsel.sh
+**=fzfdesel.sh
+//=rgfind.sh
+_=fzcd.sh
+bcp=batch_copy.sh
+bmi=bm_import.sh
+bn=batch_create.sh
+clip=clip.sh
+cr=cprm.sh
+da=disk_analyzer.sh
+dr=dragondrop.sh
+fdups=fdups.sh
+gg=pager.sh
+h=fzfhist.sh
+i=img_viewer.sh
+ih=ihelp.sh
+kbgen=kbgen
+kd=decrypt.sh
+ke=encrypt.sh
+music=music_player.sh
+ml=mime_list.sh
+plugin1=xclip.sh
+ptot=pdf_viewer.sh
+update=update.sh
+vid=vid_viewer.sh
+vt=virtualize.sh
+wall=wallpaper_setter.sh

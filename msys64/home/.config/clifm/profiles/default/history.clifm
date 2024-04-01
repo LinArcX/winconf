@@ -1,0 +1,493 @@
+edit
+#1711907426
+ls
+#1711907430
+dirs-first
+#1711907432
+ls
+#1711907435
+l
+#1711907440
+f
+#1711907997
+?
+#1711908357
+ls
+#1711908362
+mktemp
+#1711908374
+ls
+#1711908382
+~
+#1711908467
+cd ~
+#1711908468
+~
+#1711908491
+sources/clifm/.gitignore
+#1711908529
+ArchConf/home/.fzf/completion.bash
+#1711909466
+.config/qq
+#1711909697
+:view
+#1711909701
+view edit
+#1711909720
+view edit nvim
+#1711909791
+fzf
+#1711909798
+ls
+#1711909802
+pwd
+#1711909812
+preview
+#1711909816
+ls
+#1711909847
+cat ble.sh/docs/Release.md
+#1711910059
+echo $PATH | grep FZF
+#1711910303
+ls
+#1711910308
+nvim ~/.bashrc
+#1711910328
+ble.sh/.gitignore
+#1711910333
+ls
+#1711910349
+rm -rfd ble.sh/
+#1711910351
+ls
+#1711910388
+nvim ~/.bashrc
+#1711913819
+fzf
+#1711913858
+~
+#1711913886
+cs edit
+#1711913926
+ls .config/
+#1711913930
+ls .config/clifm/
+#1711913940
+fzf
+#1711914127
+ls
+#1711914164
+~/.bashrc
+#1711914171
+o ~/.bashrc
+#1711914175
+nvim ~/.bashrc
+#1711914192
+e
+#1711914196
+nvim ~/.bashrc
+#1711914611
+e
+#1711914619
+source ~/.bashrc
+#1711914646
+mf
+#1711914663
+cs edit
+#1711914889
+export LANG=en_US.UTF-8
+#1711914945
+?
+#1711914976
+s LICENSE
+#1711914993
+commands
+#1711915054
+ls
+#1711915078
+pwd
+#1711915092
+ws 2
+#1711915095
+ws1
+#1711915097
+ws4
+#1711915115
+ws 5
+#1711915118
+ws 6
+#1711915120
+ws 7
+#1711915122
+ws 8
+#1711915123
+ws 9
+#1711915144
+ws 1
+#1711915147
+ws 3
+#1711915148
+ls
+#1711915150
+pwd
+#1711915151
+dir
+#1711915195
+~
+#1711915243
+saeed/
+#1711915310
+nvim ~/.bashrc
+#1711915325
+/c/Users/saeed/
+#1711915333
+.wezterm.lua
+#1711915352
+ls
+#1711915369
+user
+#1711915371
+users
+#1711915377
+user
+#1711915382
+users
+#1711915384
+man users
+#1711915398
+cs edit
+#1711915417
+prompt
+#1711915442
+prompt set classic
+#1711915454
+prompt set clifm
+#1711915462
+prompt set clifm-no-color
+#1711915468
+prompt set clifm-box-drawing
+#1711915475
+prompt set security-scanner
+#1711915478
+ls
+#1711915487
+prompt set curves
+#1711915489
+ls
+#1711915525
+prompt set cold-winter
+#1711915527
+ls
+#1711915539
+prompt set cold-winter
+#1711915550
+prompt set spot
+#1711915576
+prompt set green-beret
+#1711915579
+ls
+#1711915593
+prompt set artic-particles
+#1711915607
+prompt set green-beret
+#1711915622
+prompt edit
+#1711915682
+prompt reload
+#1711915691
+prompt edit
+#1711915751
+prompt set green-beret
+#1711915799
+p 1
+#1711915803
+p 2
+#1711915820
+prompt set green-beret
+#1711915831
+prompt set classic
+#1711915834
+ls
+#1711915835
+pwd
+#1711915838
+ls
+#1711915855
+prompt edit
+#1711915884
+ls
+#1711915933
+cd ~/.config/clifm/
+#1711915964
+prompt edit
+#1711916040
+cd ~/.config/clifm/
+#1711916050
+nvim colors/default.clifm
+#1711916108
+prompt edit
+#1711916187
+ls
+#1711916195
+cd ~/.config/clifm/
+#1711916200
+nvim colors/default.clifm
+#1711916246
+ls
+#1711916259
+prompt set classic
+#1711916273
+nvim colors/default.clifm
+#1711916315
+cs edit
+#1711916411
+prompt set firestarter
+#1711916427
+prompt set green-beret
+#1711916439
+c
+#1711916446
+cs edit
+#1711916475
+prompt edit
+#1711916506
+ls
+#1711916517
+prompt set clifm-box-drawing
+#1711916520
+ls
+#1711916539
+prompt set security-scanner
+#1711916545
+prompt set curves
+#1711916557
+prompt set cold-winter
+#1711916569
+pompt set
+#1711916578
+prompt set artic-particles
+#1711916585
+prompt set green-beret
+#1711916593
+pprompt
+#1711916610
+prompt set classic
+#1711916617
+prompt set security-scanner
+#1711916625
+prompt set curves
+#1711916637
+prompt set firestarter
+#1711916649
+prompt set set
+#1711916657
+prompt set artic-particles
+#1711916663
+prompt set spot
+#1711916672
+prompt set curves
+#1711916679
+prompt set security-scanner
+#1711916682
+ls
+#1711916691
+prompt set clifm-box-drawing
+#1711916697
+prompt set clifm-no-color
+#1711916708
+cs edit
+#1711916729
+ls
+#1711916752
+cs edit
+#1711916762
+rg splash
+#1711916768
+rg Splash
+#1711916778
+nvim profiles/default/clifmrc
+#1711916804
+pwd
+#1711916805
+ls
+#1711916833
+plugins/
+#1711916835
+ls
+#1711916840
+nvim profiles/default/clifmrc
+#1711916899
+rg Welcome
+#1711917094
+echo $LANG
+#1711917099
+export LANG=en_US.UTF-8
+#1711917101
+echo $LANG
+#1711917118
+nvim ~/.bashrc
+#1711917129
+e
+#1711917132
+nvim ~/.bashrc
+#1711917152
+e
+#1711917155
+source ~/.bashrc
+#1711917171
+cd /c/Users/saeed/
+#1711917177
+.wezterm.lua
+#1711918071
+~
+#1711918077
+cd ~/.config/clifm/
+#1711918084
+rg Welcome
+#1711918093
+nvim profiles/default/clifmrc
+#1711918119
+cd ~/.config/clifm/
+#1711918121
+nvim profiles/default/clifmrc
+#1711918150
+rg local
+#1711918244
+nvim ~/.bashrc
+#1711918252
+e
+#1711918258
+source ~/.bashrc
+#1711918264
+cs edit
+#1711918288
+nvim profiles/default/clifmrc
+#1711918350
+pwd
+#1711918365
+nvim profiles/default/clifmrc
+#1711918419
+~
+#1711918704
+scoop list
+#1711918723
+x64dbg
+#1711918748
+where shutdown
+#1711918766
+powercfg ArchConf/
+#1711918770
+power_manager
+#1711918774
+powercfg
+#1711918778
+powercfg /?
+#1711918785
+powercfg /ENERTY
+#1711918787
+powercfg /ENERGY
+#1711918801
+powercfg /L
+#1711918814
+powercfg /L 1
+#1711918821
+powercfg /?
+#1711918827
+ls
+#1711918831
+echo $LANG
+#1711918925
+ls
+#1711918928
+echo $LANG
+#1711919213
+~
+#1711919214
+ls
+#1711919219
+…
+#1711919240
+ls
+#1711919249
+~
+#1711919363
+help
+#1711919649
+cat q
+#1711919655
+r 4
+#1711919666
+help
+#1711919704
+cs edit
+#1711919717
+rg long
+#1711919743
+nvim profiles/default/clifmrc
+#1711919775
+cd ArchConf/
+#1711919780
+ls
+#1711920839
+nvim bootstrap.sh
+#1711920856
+pacman -Qe
+#1711921055
+pacman -R -h
+#1711921090
+pacman -Rnsc nnn
+#1711921116
+~
+#1711921122
+[B
+#1711921139
+pacman -Rnsc tree
+#1711921146
+pacman -Qe
+#1711921153
+pacman -Syyu
+#1711921165
+kb
+#1711921174
+kb edit
+#1711921203
+~
+#1711921211
+kb edit
+#1711921240
+cmd
+#1711921249
+powershell
+#1711921286
+kb edit
+#1711921329
+~
+#1711921333
+ls
+#1711921334
+pwd
+#1711921339
+~
+#1711921419
+pacman -Qe xournal
+#1711921428
+pacman -Ss xournal
+#1711921438
+pacman -Ss gromit
+#1711921460
+pacman -Ss glow
+#1711921487
+shutdown
+#1711921499
+shutdown /p
+#1711921522
+shutdown /dfp
+#1711921525
+shutdown /pdf
+#1711921563
+shutdown /s
+#1711921566
+cmd
+#1711921575
+powershell

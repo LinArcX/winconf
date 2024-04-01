@@ -1,0 +1,43 @@
+# Default color scheme for clifm
+
+# FiletypeColors defines the color used for file types when listing files,
+# just as InterfaceColors defines colors for CliFM's interface and ExtColors
+# for file extensions. They all make use of the same format used by the
+# LS_COLORS environment variable. Thus, "di=01;34" means that (non-empty)
+# directories will be listed in bold blue.
+# Color codes are traditional ANSI escape sequences less the escape char and
+# the final 'm'. 8 bit, 256 colors, RGB, and hex (#rrggbb) colors are supported.
+# A detailed explanation of all these codes can be found in the manpage.
+
+FiletypeColors="bd=1;38;5;229:ca=30;41:cd=1;38;5;214:di=1;34:ed=2;34:ee=32:ef=2:ex=1;32:fi=0:ln=1;36:mh=7;36:nd=1;31:nf=2;31:no=4;31;47:or=4;2;36:ow=34;42:pi=35:sg=30;43:so=1;35:st=37;44:su=37;41:tw=30;42:uf=4;2;37:"
+
+InterfaceColors="bm=1;32:db=:dd=:de=:df=0:dg=38;5;140:dk=:dl=2;37:dn=:do=:dp=:dr=:dw=:dxd=:dxr=:dz=:el=36:em=1;31:fc=38;5;246:hb=36:hc=2;37:hd=36:he=36:hn=:hp=36:hq=LY:hr=31:hs=32:hv=32:lc=38;5;43:li=1;32:mi=1;36:nm=1;32:ro=:si=1;34:sb=2;33:sc=2;36:sd=2;37:sf=4;2;36:sh=2;35:sp=2;31:sx=2;32:sz=4;2;35:ti=1;36:ts=4;35:tt=1;2;36:tx=0:wc=1;36:wm=38;5;228:ws1=34:ws2=31:ws3=38;5;228:ws4=32:ws5=36:ws6=38;5;214:ws7=35:ws8=2;37:xf=1;31:xs=32:"
+
+# Same as FiletypeColors, but for file extensions. The format is always
+# *.EXT=COLOR (extensions are case insensitive)
+ExtColors="*.tar=1;31:*.tgz=1;31:*.arc=1;31:*.arj=1;31:*.taz=1;31:*.lha=1;31:*.lz4=1;31:*.lzh=1;31:*.lzma=1;31:*.tlz=1;31:*.txz=1;31:*.tzo=1;31:*.t7z=1;31:*.zip=1;31:*.z=1;31:*.dz=1;31:*.gz=1;31:*.lrz=1;31:*.lz=1;31:*.lzo=1;31:*.xz=1;31:*.zst=1;31:*.tzst=1;31:*.bz2=1;31:*.bz=1;31:*.tbz=1;31:*.tbz2=1;31:*.tz=1;31:*.deb=1;31:*.rpm=1;31:*.jar=1;31:*.war=1;31:*.ear=1;31:*.sar=1;31:*.rar=1;31:*.alz=1;31:*.ace=1;31:*.zoo=1;31:*.cpio=1;31:*.7z=1;31:*.rz=1;31:*.cab=1;31:*.wim=1;31:*.swm=1;31:*.dwm=1;31:*.esd=1;31:*.apk=1;31:*.iso=1;31:*.img=1;31:*.avif=35:*.jpg=35:*.jpeg=35:*.jxl=35:*.mjpg=35:*.mjpeg=35:*.gif=35:*.bmp=35:*.xbm=35:*.xpm=35:*.png=35:*.svg=35:*.svgz=35:*.pcx=35:*.pbm=35:*.pgm=35:*.ppm=35:*.tga=35:*.tif=35:*.tiff=35:*.mng=35:*.mov=1;35:*.mpg=1;35:*.mpeg=1;35:*.m2v=1;35:*.mkv=1;35:*.webm=1;35:*.ogm=1;35:*.mp4=1;35:*.m4v=1;35:*.mp4v=1;35:*.vob=1;35:*.qt=1;35:*.nuv=1;35:*.wmv=1;35:*.asf=1;35:*.rm=1;35:*.rmvb=1;35:*.flc=1;35:*.avi=1;35:*.fli=1;35:*.flv=1;35:*.gl=1;35:*.dl=1;35:*.xcf=1;35:*.xwd=1;35:*.yuv=1;35:*.cgm=1;35:*.emf=1;35:*.ogv=1;35:*.ogx=1;35:*.webp=1;35:*.aac=38;5;214:*.au=38;5;214:*.m4a=38;5;214:*.mid=38;5;214:*.midi=38;5;214:*.mp3=38;5;214:*.mka=38;5;214:*.ogg=38;5;214:*.opus=38;5;214:*.spx=38;5;214:*.wma=38;5;214:*.wv=38;5;214:*.wav=38;5;214:*.flac=38;5;214:*.aif=38;5;214:*.pdf=38;5;223:*.djvu=38;5;223:*.epub=38;5;223:*.mobi=38;5;223:*.cbr=38;5;223:*.cbz=38;5;223:*.fb2=38;5;223:*.ps=38;5;228:*.sxw=38;5;228:*.doc=38;5;228:*.docx=38;5;228:*.xls=38;5;228:*.xlsx=38;5;228:*.xlr=38;5;228:*.sxi=38;5;228:*.ppt=38;5;228:*.pptx=38;5;228:*.odt=38;5;228:*.ods=38;5;228:*.odp=38;5;228:*.odg=38;5;228:*.rtf=38;5;228:*.c=1;38;5;247:*.c++=1;38;5;247:*.cc=1;38;5;247:*.cpp=1;38;5;247:*.h=1;38;5;247:*.h++=1;38;5;247:*.hh=1;38;5;247:*.go=1;38;5;247:*.java=1;38;5;247:*.js=1;38;5;247:*.lua=1;38;5;247:*.php=1;38;5;247:*.py=1;38;5;247:*.rb=1;38;5;247:*.rs=1;38;5;247:*.kt=1;38;5;247:*.kts=1;38;5;247:*.hs=1;38;5;247:*.pl=1;38;5;247:*.vb=1;38;5;247:*.html=38;5;85:*.htm=38;5;85:*.shtml=38;5;85:*.xhtml=38;5;85:*.xml=38;5;85:*.rss=38;5;85:*.css=38;5;85:*.tex=38;5;85:*.ltx=38;5;85:*.md=38;5;85:*.opf=38;5;85:*.cache=38;5;247:*.tmp=38;5;247:*.temp=38;5;247:*.log=38;5;247:*.bak=38;5;247:*.bk=38;5;247:*.in=38;5;247:*.out=38;5;247:*.part=38;5;247:*.aux=38;5;247:*.old=38;5;247:*.orig=38;5;247:*.rej=38;5;247:*.swp=38;5;247:*.pid=38;5;247:"
+
+# Color shades used to colorize timestamps and file sizes. Consult the
+# manpage for more information
+DateShades="2,197-2,231,253,250,247,244"
+SizeShades="2,197-2,79,77,228,215,203"
+
+DirIconColor="00;33"
+
+DividingLine="-"
+
+# If set to 'true', automatically print notifications at the left
+# of the prompt. If set to 'false', let the prompt string handle these notifications
+# itself via escape codes. See the manpage for more information
+Notifications="true"
+
+#Prompt="\[\e[0m\]\I[\S\[\e[0m\]]\l \A \u:\H \[\e[00;36m\]\w\n\[\e[0m\]<\z\[\e[0m\]>\[\e[00;34m\] \$\[\e[0m\] "
+Prompt="classic"
+
+# An alternative prompt to warn the user about invalid command names
+EnableWarningPrompt="true"
+
+WarningPrompt="\[\e[00;02;31m\](!) > "
+
+FzfTabOptions="--color=16,prompt:6,fg+:-1,pointer:4,hl:2,hl+:2,gutter:-1,marker:2,border:7:dim --bind tab:accept,right:accept,left:abort,alt-p:toggle-preview,change:top,alt-up:preview-page-up,alt-down:preview-page-down --inline-info --layout=reverse-list --preview-window=wrap,border-left"
+

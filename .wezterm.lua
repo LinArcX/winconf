@@ -14,10 +14,10 @@ wezterm.on("gui-startup", function()
 end)
 
 local padding = {
+	top = "0.4cell",
+	bottom = "0.0cell",
 	left = "0.3cell",
 	right = "0.1cell",
-	top = "0.1cell",
-	bottom = "0.0cell",
 }
 
 -- Reload the configuration every ten minutes
@@ -45,6 +45,8 @@ local function get_theme()
 end
 
 config.bidi_enabled = true
+-- config.exit_behavior = "CloseOnCleanExit" 
+config.default_prog = { 'clifm'} -- , '-c' , ' clifm; bash' 
 config.enable_scroll_bar = true
 config.window_background_opacity = 0.99
 config.window_padding = padding

@@ -14,7 +14,7 @@ pacman -S tree procps-ng rsync unzip zip
 	mingw-w64-ucrt-x86_64-qemu mingw-w64-ucrt-x86_64-qalculate-gtk
 
 ## development
-pacman -S base-devel gcc gdb git cscope man-db man-pages-posix msys2-runtime 
+pacman -S base-devel gcc gdb git cscope clang llvm man-db man-pages-posix msys2-runtime 
 	mingw-w64-ucrt-x86_64-cppcheck mingw-w64-ucrt-x86_64-neovim 
 
 ## audio/video

@@ -1,29 +1,35 @@
-# Philosophy
-I tend to follow these ideas as much as i can:
-- Using Free/Open source software.
-- Using Terminal-based applications.
-- Not using emulated software like: cygwin or msys2.
-- Avoid using software from microsoft like vscode, terminal, etc.. use more free alternative.
-- Using software that are written with native windows technologies like win32. c/c++/rust applications are the best.
+# philosophy
+I try to follow these ideas as much as i can:
+- using free/open source software.
+- using terminal-based applications.
+- using msys2 for development base and scoop for installing any other packages.
+- avoid using software from microsoft like vscode, terminal, etc.. use more free alternative or compile linux versions with msys2.
+
+## for future
+- i don't want to rely on supply chain. building software directly the pc is the best/safest way.(so i will ditch scoop in future)
+- it's better to replace c/c++ software with rust.
 - In some cases it's better to use GUI applications.(like web-browsers)
 
-# Prerequisites
-- cmd
-- wmenu [https://github.com/LinArcX/wmenu]
+# prerequisites
+As i said, i use msys2 for development.(it has pacman and a wide varity of software)
+for installing any other software, i use scoop package manger.
+
+to see list of all software, please refer to:
+- msys64\bootstrap.txt
+- scoop.md
+
+## other software that maybe usefull
 - scoop
-  7zip arc unar winrar zip unzip xz zstd tar
-  gsudo alacritty lf fzf lite-xl okular speedcrunch anki cwrsync bottom(btm) qemu
-  mpv nomacs ffmpeg mediainfo mpg123 flameshot
-  brave qbittorrent uget youtube-dl curl dog
+- wezterm [https://wezfurlong.org/wezterm/] - replacement of tmux
+- 7zip arc unar winrar zip unzip zstd tar gsudo fzf
+- cwrsync ffmpeg  uget youtube-dl curl dog
   clavier-plus clink clink-completions clink-flex-prompt uutils-coreutils
   git fd grep bat llvm neovim dependencies openssh regdllview scc ripgrep ugrep jq zeal doxygen dos2unix cppcheck cscope delta diffutils gdb drmemory amber czkawka
 
 ## Optional
 - broot
-- OBS Studio
 - fzf-bash
 - fzf-bash-completion
-- wezterm [https://wezfurlong.org/wezterm/] - replacement of tmux
 
 ## Packages that may not available
 - opencppcoverage

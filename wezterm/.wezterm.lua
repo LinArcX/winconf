@@ -10,6 +10,7 @@ config.integrated_title_button_style = "Windows"
 config.use_fancy_tab_bar = false
 config.show_tabs_in_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
+config.window_close_confirmation = 'NeverPrompt'
 
 wezterm.on("gui-startup", function()
   local tab, pane, window = mux.spawn_window{}

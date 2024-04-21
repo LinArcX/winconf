@@ -29,3 +29,79 @@ help
 prompt set help
 #1713675098
 bm
+#1713683680
+ls
+#1713683684
+pwd
+#1713683966
+bm
+#1713683980
+~
+#1713683985
+mkdir Downloads
+#1713683990
+bm
+#1713684210
+scoop list
+#1713684307
+where gsudo
+#1713684906
+bm
+#1713685218
+where mpv
+#1713685227
+ls ~/.config/
+#1713685267
+nvim ~/.bashrc
+#1713685439
+nvim ~/.config/nvim/init.lua
+#1713685689
+nvim ~/.bashrc
+#1713685752
+pacman -Ss font
+#1713685759
+pacman -Ss vazir
+#1713687777
+~
+#1713687780
+bm
+#1713687918
+gis
+#1713687940
+nvim .gitignore
+#1713687948
+gis
+#1713687953
+gia
+#1713687956
+gis
+#1713687962
+gic
+#1713688012
+gip
+#1713688019
+gil
+#1713688023
+g
+#1713688033
+git log
+#1713688039
+git history
+#1713688087
+nvim ~/.bashrc
+#1713689056
+bm
+#1713689064
+nvim
+#1713689075
+resume/
+#1713689076
+nvim
+#1713689080
+sara/
+#1713689082
+nvim
+#1713689200
+nvim /c/Users/saeed/.wezterm.lua
+#1713689344
+bm

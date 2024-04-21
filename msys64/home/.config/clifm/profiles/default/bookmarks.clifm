@@ -12,17 +12,16 @@ profile:~/.profile
 bash_profile:~/.bash_profile
 inputrc:~/.inputrc
 
-VoidConf:~/VoidConf
 rust:/d/workspace/rust
 clifm:~/.config/clifm
 clifm_default_profile:~/.config/clifm/profiles/default
-nvim:~/.config/nvim
+mpv:/c/Users/saeed/AppData/Local/nvim
 Downloads:~/Downloads
 life:/d/workspace/other/life/
 wmenu:/d/workspace/c++/02_maintainance/wmenu
 winconf:/d/workspace/other/winconf
 dwm:/d/workspace/c/01_active/dwm
-mpv:~/.config/mpv
+mpv:/c/Users/saeed/AppData/Local/mpv
 trash:~/.local/share/Trash/files
 pardis:/d/workspace/assembly/pardis
 ArenOS:/d/workspace/other/ArenOS

@@ -21,10 +21,11 @@ to see list of all software, please refer to:
 ## other software that maybe usefull
 - scoop
 - wezterm [https://wezfurlong.org/wezterm/] - replacement of tmux
-- 7zip arc unar winrar zip unzip zstd tar gsudo fzf
-- cwrsync ffmpeg  uget youtube-dl curl dog
-  clavier-plus clink clink-completions clink-flex-prompt uutils-coreutils
-  git fd grep bat llvm neovim dependencies openssh regdllview scc ripgrep ugrep jq zeal doxygen dos2unix cppcheck cscope delta diffutils gdb drmemory amber czkawka
+- 7zip unar winrar zstd tar gsudo fzf
+- uget youtube-dl curl dog
+  fd grep bat llvm neovim openssh scc ripgrep ugrep jq
+  zeal doxygen dos2unix cppcheck cscope delta diffutils gdb
+  drmemory
 
 ## Optional
 - broot

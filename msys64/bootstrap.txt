@@ -20,7 +20,7 @@ pacman -S base-devel gcc gdb git cscope clang llvm man-db man-pages-posix msys2-
 
 ## audio/video
 pacman -S mingw-w64-ucrt-x86_64-mediainfo mingw-w64-ucrt-x86_64-mpg123
-	 mingw-w64-ucrt-x86_64-mpv
+	 mingw-w64-ucrt-x86_64-mpv mingw-w64-ucrt-x86_64-ffmpeg 
 
 ## pdf/docs
 pacman -S mingw-w64-ucrt-x86_64-okular

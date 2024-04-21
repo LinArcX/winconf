@@ -5,4 +5,4 @@ scoop install gsudo clavier-plus clink clink-completions clink-flex-prompt
 
 ## development
 scoop install amber arc lua-language-server clangd dependencies drmemory mandoc
-  regdllview x64dbg
+  regdllview x64dbg arduino-cli

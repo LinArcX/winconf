@@ -104,7 +104,7 @@ cmp.setup {
     ['<C-up>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
 
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-o>'] = cmp.mapping.complete(),
     ['<C-x>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,

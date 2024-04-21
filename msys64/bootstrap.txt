@@ -12,6 +12,7 @@ pacman -S tree procps-ng rsync unzip zip
 	mingw-w64-ucrt-x86_64-fzf mingw-w64-ucrt-x86_64-czkawka-cli
 	mingw-w64-ucrt-x86_64-yt-dlp mingw-w64-ucrt-x86_64-qbittorrent
 	mingw-w64-ucrt-x86_64-qemu mingw-w64-ucrt-x86_64-qalculate-gtk
+  mingw-w64-ucrt-x86_64-jq
 
 ## development
 pacman -S base-devel gcc gdb git cscope clang llvm man-db man-pages-posix msys2-runtime 

@@ -1,4 +1,4 @@
 garbage/*
 gui-sock-2992
-mpv/cache/
-
+mpv/cache/*
+mpv/watch_later/*

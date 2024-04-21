@@ -33,5 +33,8 @@ git clone https://github.com/leo-arch/clifm.git
 cd clifm
 make -f misc/cygwin/Makefile install
 
+## rust
+pacman -S mingw-w64-ucrt-x86_64-rust mingw-w64-ucrt-x86_64-rust-docs
+
 # tips
 XDG_DATA_HOME and XDG_DATA_DIRS

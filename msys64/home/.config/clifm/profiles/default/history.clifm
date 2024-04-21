@@ -701,3 +701,105 @@ cd ~/scripts/
 cd bash/
 #1713709325
 explorer.exe .
+#1713709619
+a
+#1713709620
+d
+#1713709622
+dirs
+#1713709625
+books
+#1713709632
+gis
+#1713709651
+nvim .gitignore
+#1713709659
+gis
+#1713709663
+nvim .gitignore
+#1713709670
+gis
+#1713709675
+gid
+#1713709740
+nvim nvim/lua/user/plugins/m_whichkey.lua
+#1713709746
+gis
+#1713709749
+gia
+#1713709750
+gic
+#1713709754
+gip
+#1713709758
+e
+#1713709768
+ls ~/scripts/bash/
+#1713709869
+gis
+#1713710232
+bm
+#1713710249
+~
+#1713710251
+cd scripts/
+#1713710252
+ls
+#1713710254
+cd bash/
+#1713710256
+nvim a.sh
+#1713710400
+gis
+#1713710403
+gid
+#1713710410
+gis
+#1713710411
+gia
+#1713710412
+gis
+#1713710413
+gic
+#1713710416
+gip
+#1713710503
+a
+#1713710613
+bm
+#1713710618
+nvim
+#1713710768
+gis
+#1713710851
+nvim ~/scripts/bash/a.sh
+#1713710869
+a
+#1713711001
+gis
+#1713711003
+git log
+#1713711071
+a
+#1713711139
+nvim ~/scripts/bash/a.sh
+#1713711169
+a
+#1713711291
+ls
+#1713711300
+scoop list
+#1713711303
+nvim scoop.md
+#1713711356
+scoop uninstall 7zip
+#1713711360
+scoop list
+#1713711537
+pacman -Qe
+#1713711546
+nvim msys64/bootstrap.txt
+#1713711732
+gis
+#1713711733
+gid

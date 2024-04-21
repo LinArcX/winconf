@@ -1,10 +1,11 @@
 [core]
   pager = delta
+	symlinks = true
   #editor = nvim
   #gitproxy = /home/linarcx/bin/git-proxy-wrapper
 
-[include]
-  path = ~/VoidConf/home/.config/delta_themes.gitconfig
+[credential]
+	helper = manager
 
 [user]
 	name = linarcx
@@ -41,8 +42,8 @@
   file-style = omit
   hunk-header-decoration-style = blue box
   hunk-header-file-style = red
-  #hunk-header-line-number-style = "#067a00"
   hunk-header-style = file
+  #hunk-header-line-number-style = "#067a00"
 
 # log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 #[http]
@@ -59,5 +60,3 @@
 
 #[http]
 #	proxy = socks://127.0.0.1:1080
-[init]
-	defaultBranch = main

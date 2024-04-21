@@ -26,7 +26,7 @@ selected=$(printf '%s\n' "${commands[@]}" | fzf --header="apps:")
 
 case $selected in
   "brave")
-    /c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe &;;
+    /c/Users/saeed/scoop/apps/brave/current/brave.exe &;;
   "vokoscreenNG")
     /c/Users/saeed/scoop/apps/vokoscreenng-np/current/vokoscreenNG.exe &;;
   "ntop")
@@ -54,7 +54,7 @@ case $selected in
   "Vial")
     /c/Program\ Files\ \(x86\)/Vial/Vial.exe &;;
   "LibreOffice-Write")
-    /c/Program\ Files/LibreOffice/program/swriter.exe &;;
+    /c/Users/saeed/scoop/apps/libreoffice/current/LibreOffice/program/swriter.exe &;;
   "window detective")
     /c/Program\ Files\ \(x86\)/Window\ Detective/Window\ Detective.exe &;;
   "dependencies")

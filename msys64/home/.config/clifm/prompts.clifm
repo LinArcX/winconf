@@ -111,18 +111,18 @@ RegularPrompt="\[\e[0m\]\I[\S\[\e[0m\]]\l \A \u:\H \w\n<\z> \$ \[\e[0m\]"
 EnableWarningPrompt=true
 WarningPrompt="\[\e[0m\](!) > "
 
-[classic]
-Notifications=true
-RegularPrompt="\I\[\e[1;32m\] \[\e[1;34m\]\w \[\e[0m\]\$ "
-EnableWarningPrompt=true
-WarningPrompt="\I\[\e[1;32m\][\u@\H] \[\e[1;34m\]\w \[\e[1;31m\]! \[\e[00;02;31m\]"
-
 [clifm-box-drawing]
 # The box drawing set isn't supported by all terminals
 Notifications=false
 RegularPrompt="\[\e[0m\]\[\e[0;36m\]\[\e(0\]lq\[\e(B\]\[\e[0;31m\]\#\[\e[0m\]\I\[\e[32m\]\*\[\e[36m\]\%\[\e[31m\]\(\[\e[33m\]\)\[\e[32m\]\=\[\e[0m\][\S\[\e[0m\]]\l \A \u:\H \[\e[0;36m\]\w\n\[\e[0;36m\]\[\e(0\]mq\[\e(B\]\[\e[0m\]<\z\[\e[0m\]> \[\e[0;34m\]\$ \[\e[0m\]"
 EnableWarningPrompt=true
 WarningPrompt="\[\e[0;36m\]\[\e(0\]mq\[\e(B\]\[\e[0m\]<\z\[\e[0m\]> \[\e[1;31m\]\! \[\e[00;02;31m\]"
+
+[classic]
+Notifications=true
+RegularPrompt="\I\[\e[1;32m\][\u@\H] \[\e[1;34m\]\w \[\e[0m\]\$ "
+EnableWarningPrompt=true
+WarningPrompt="\I\[\e[1;32m\][\u@\H] \[\e[1;34m\]\w \[\e[1;31m\]! \[\e[00;02;31m\]"
 
 [security-scanner]
 # Print file statistics about the current directory (-:-:-:-) in this order:

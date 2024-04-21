@@ -1,14 +1,21 @@
-######################
-# Actions file for clifm #
-######################
+              ######################
+              # CliFM actions file #
+              ######################
 
-# Define here your custom actions. Actions are custom command names
-# bound to an executable file located either in DATADIR/clifm/plugins
-# (usually /usr/local/share/clifm/plugins) or in $XDG_CONFIG_HOME/clifm/plugins (usually ~/.config/clifm/plugins).
-# Actions can be executed directly from clifm command line, as if they
-# were any other command, and the associated file will be executed
-# instead. All parameters passed to the action command will be passed
-# to the corresponding plugin as well.
+# Empty and commented lines are omitted.
+
+# Define here your custom actions.
+
+# Actions are custom command names bound to an executable file located
+# either in DATADIR/clifm/plugins (usually /usr/share/clifm/plugins) or
+# in $XDG_CONFIG_HOME/clifm/plugins (usually ~/.config/clifm/plugins).
+
+# Actions can be executed directly from the CliFM command line, as if
+# they were any other command: the associated file will be executed
+# instead.
+
+# All parameters passed to the action command will be passed to the
+# corresponding plugin as well.
 
 +=finder.sh
 ++=jumper.sh
@@ -32,11 +39,14 @@ ih=ihelp.sh
 kbgen=kbgen
 kd=decrypt.sh
 ke=encrypt.sh
-music=music_player.sh
 ml=mime_list.sh
-plugin1=xclip.sh
+music=music_player.sh
 ptot=pdf_viewer.sh
+rrm=recur_rm.sh
 update=update.sh
 vid=vid_viewer.sh
 vt=virtualize.sh
 wall=wallpaper_setter.sh
+plugin1=xclip.sh
+plugin2=clih.sh
+plugin3=bashh.sh

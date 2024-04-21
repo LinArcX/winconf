@@ -7,4 +7,40 @@
 
 # The bookmarks syntax is: name:path
 # Example:
-clifm:/home/saeed/.config/clifm/profiles/default
+bashrc:~/.bashrc
+profile:~/.profile
+bash_profile:~/.bash_profile
+inputrc:~/.inputrc
+
+VoidConf:~/VoidConf
+rust:/d/workspace/rust
+clifm:~/.config/clifm
+clifm_default_profile:~/.config/clifm/profiles/default
+nvim:~/.config/nvim
+Downloads:~/Downloads
+life:/d/workspace/other/life/
+wmenu:/d/workspace/c++/02_maintainance/wmenu
+winconf:/d/workspace/other/winconf
+dwm:/d/workspace/c/01_active/dwm
+mpv:~/.config/mpv
+trash:~/.local/share/Trash/files
+pardis:/d/workspace/assembly/pardis
+ArenOS:/d/workspace/other/ArenOS
+kaveh:/d/workspace/c/01_active/kaveh
+akoman:/d/workspace/c/01_active/akoman
+cave:/d/workspace/c/01_active/cave
+Nand2Tetris:/d/workspace/other/Nand2Tetris
+movies:/e/video/movies/
+tv_series:/e/video/tv_series
+books:/d/books
+video:/d/video
+images:/d/images
+x64_compiler:/d/video/computer/languages/c/05_porgramming_an_x64_compiler
+write_your_own_os:/d/video/computer/languages/c/06_write_your_own_operating_system
+bitwise:/d/video/computer/languages/c/00_bitwise/
+handmade_hero:/d/video/computer/languages/c/01_hand_made_hero
+text_editor_from_scratch:/d/video/computer/languages/c/04_programming_a_text_editor_from_scratch
+video_game_from_scratch:/d/video/computer/languages/c/02_make_video_game_from_scratch_in_c
+sample_profiler_from_scratch:/d/video/computer/languages/c/07_simple_profiler_from_scratch
+windbg:/d/video/computer/languages/c/09_using_win_dbg
+graphic_progamming:/d/video/computer/languages/c/11_graphic_programming

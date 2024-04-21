@@ -1,2 +1,2 @@
-Put me here:
-C:\Users\saeed\scoop\apps\clavier-plus\current
+put Clavier.ini here:
+C:\Users\<USERNAME>\scoop\apps\clavier-plus\current

@@ -1,0 +1,19 @@
+$include /etc/inputrc
+set enable-keypad on
+set completion-ignore-case On
+
+# Make Tab cycle between possible completions
+# Cycle forward: Tab
+# Cycle backward: Shift-Tab
+
+TAB: menu-complete
+"\e[Z": menu-complete-backward
+
+# Make C-q display the list of possible completions
+
+Control-q: complete
+
+# Display the list of matches when no further completion is possible
+
+set show-all-if-unmodified on
+set completion-display-width 1

@@ -1,0 +1,37 @@
+# packages
+
+## fonts
+pacman -S mingw-w64-ucrt-x86_64-ttf-cascadia-code-nerd
+	mingw-w64-ucrt-x86_64-ttf-cascadia-mono-nerd
+
+## utility
+pacman -S tree procps-ng rsync unzip zip 
+	mingw-w64-ucrt-x86_64-bat mingw-w64-ucrt-x86_64-bottom 
+	mingw-w64-ucrt-x86_64-ripgrep mingw-w64-ucrt-x86_64-scc
+	mingw-w64-ucrt-x86_64-delta mingw-w64-ucrt-x86_64-fd 
+	mingw-w64-ucrt-x86_64-fzf mingw-w64-ucrt-x86_64-czkawka-cli
+	mingw-w64-ucrt-x86_64-yt-dlp mingw-w64-ucrt-x86_64-qbittorrent
+	mingw-w64-ucrt-x86_64-qemu mingw-w64-ucrt-x86_64-qalculate-gtk
+
+## development
+pacman -S base-devel gcc gdb git cscope man-db man-pages-posix msys2-runtime 
+	mingw-w64-ucrt-x86_64-cppcheck mingw-w64-ucrt-x86_64-neovim 
+
+## audio/video
+pacman -S mingw-w64-ucrt-x86_64-mediainfo mingw-w64-ucrt-x86_64-mpg123
+	 mingw-w64-ucrt-x86_64-mpv
+
+## pdf/docs
+pacman -S mingw-w64-ucrt-x86_64-okular
+
+# clifm
+## dependencies
+pacman -S libreadline-devel gettext-devel 
+
+## installation
+git clone https://github.com/leo-arch/clifm.git
+cd clifm
+make -f misc/cygwin/Makefile install
+
+# tips
+XDG_DATA_HOME and XDG_DATA_DIRS

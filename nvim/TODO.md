@@ -1,7 +1,0 @@
-- [] Ctrl+Space doesn't work for LSP for win32 application.
-- [] Icons doesn't appear.
-- [] setup fzf. (git actions)
-- [] open explorer when press WIN+Enter in specific directory without third party software. (in maximized)
-- [] open wezTerm in maximized
-- [] setup prompt for clink
-- [] create a keybinding to remove all trailing spaces from current file.

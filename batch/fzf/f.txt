@@ -1,2 +1,0 @@
-C:\Users\saeed\AppData\Roaming\alacritty\alacritty.yml
-C:\Users\saeed\scoop\apps\clavier-plus\current\Clavier.ini

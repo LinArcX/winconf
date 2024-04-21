@@ -1,5 +1,0 @@
-PATH
-btm
-disableF1
-screencast
-mergeAudioAndVideo

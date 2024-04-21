@@ -1,6 +1,6 @@
 #!/bin/bash
 
-commands=("brave" "vokoscreenNG" "ntop" "qalc" "msys2" "msys2 ucrt64" "msys2 mingw64" "msys2 clang64" 
+commands=("brave" "vokoscreenNG" "ntop" "btm" "qalc" "msys2" "msys2 ucrt64" "msys2 mingw64" "msys2 clang64" 
   "HuionTablet" "qbittorrent" "kdenlive" "xournal++" "Kensington" "Vial" "LibreOffice-Write"
   "window detective" "dependencies" "regedit" "paint"
   "system properties" "system information" "system configuration" "control panel" "programs and features" "services"
@@ -31,6 +31,8 @@ case $selected in
     /c/Users/saeed/scoop/apps/vokoscreenng-np/current/vokoscreenNG.exe &;;
   "ntop")
     ntop ;;
+  "btm")
+    btm ;;
   "qalc")
     qalc ;;
   "msys2")

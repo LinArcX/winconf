@@ -12,7 +12,7 @@ case $selected in
   "restart")
     shutdown -r -t 0 ;;
   "poweroff")
-    shutdown /p /f ;;
+    shutdown -s -t 1 ;;
   *) ;;
 esac
  

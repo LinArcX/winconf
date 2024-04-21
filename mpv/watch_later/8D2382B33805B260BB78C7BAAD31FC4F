@@ -1,3 +1,0 @@
-start=202.133333
-volume=110.000000
-af=lavfi=graph=%26%dynaudnorm=f=200:g=5:r=0.1

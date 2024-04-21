@@ -2,3 +2,6 @@ garbage/*
 gui-sock-2992
 mpv/cache/*
 mpv/watch_later/*
+msys64/home/.config/clifm/profiles/default/dirhist.clifm
+msys64/home/.config/clifm/profiles/default/history.clifm
+msys64/home/.config/clifm/profiles/default/msglogs.clifm
